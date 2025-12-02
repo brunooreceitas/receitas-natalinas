@@ -1,99 +1,210 @@
-/* Optimized CSS - Mobile-first, minimal and conversion-focused */
-:root{
-  --bg:#fff9f5;
-  --brown:#2d1a06;
-  --accent:#fc7019;
-  --green:#03b367;
-  --gold:#d4af37;
-  --muted:#6b6b6b;
-  --white:#ffffff;
-  --max-width:1100px;
-  --radius:14px;
-  --ff-sans: 'Montserrat', system-ui, Arial, sans-serif;
-  --ff-serif: 'Marcellus', serif;
+/* ====== CSS FINAL OTIMIZADO ======
+   Arquivo: assets/css/optimized.css
+   Para trabalhar com o HTML final.
+   Estruturado para GitHub Pages e responsividade.
+==================================== */
+
+:root {
+  --brown: #2d1a06;
+  --accent: #fc7019;
+  --green: #03b367;
+  --gold: #d4af37;
+  --white: #ffffff;
+  --muted: #6b6b6b;
+  --radius: 12px;
+  --max: 1200px;
+  --ff: "Montserrat", Arial, sans-serif;
+  --ff-title: "Marcellus", serif;
 }
 
 /* Reset */
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:var(--ff-sans);-webkit-font-smoothing:antialiased;background:var(--bg);color:#222}
-img{max-width:100%;display:block}
-.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff);
+  background: #fff;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
 
-/* Global helpers */
-.row{display:flex;gap:16px;align-items:center}
-.center{text-align:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:none;cursor:pointer}
-.btn-primary{background:var(--green);color:#fff}
-.btn-outline{background:transparent;color:var(--green);border:2px solid var(--green)}
-.small{font-size:13px}
-.muted{color:var(--muted)}
-.h-1{font-size:28px}
-
-/* HERO */
-.hero{padding:28px 0}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
-.hero-text h1{font-family:var(--ff-serif);font-size:30px;margin:0;color:var(--brown);line-height:1.05}
-.sub{color:#3b3b3b;margin:8px 0 12px}
-.bullets{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 14px}
-.bullets li{background:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.06);font-weight:600}
-.garantia{font-size:13px;color:var(--muted);margin-top:10px}
-.hero-media{display:flex;justify-content:center}
-.hero-img{border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,0.12)}
-
-/* PROVAS */
-.provas{padding:10px 0}
-.provas-grid{display:flex;gap:12px;justify-content:center;align-items:center}
-.provas-grid img{width:110px;height:84px;object-fit:cover;border-radius:8px;border:2px solid rgba(0,0,0,0.04)}
-
-/* RECEBE */
-.recebe{padding:18px 0}
-.recebe-grid{display:grid;grid-template-columns:1fr;gap:14px}
-.recebe .item{background:#fff;padding:14px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.06);text-align:left}
-.recebe .item h3{margin:0 0 6px;font-size:16px;color:var(--brown)}
-
-/* MÓDULOS */
-.modulos{padding:18px 0}
-.modulos .modulos-grid{display:grid;grid-template-columns:1fr;gap:10px}
-.mod{background:#fff;padding:12px;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,0.06)}
-.mod h4{margin:0 0 6px;font-size:15px;color:var(--brown)}
-
-/* OFERTA */
-.oferta{padding:16px 0}
-.oferta-box{display:grid;grid-template-columns:1fr;gap:12px;align-items:center}
-.box-left img{border-radius:10px}
-.box-right h2{margin:0 0 10px;font-size:20px}
-.box-right .old{text-decoration:line-through;color:var(--muted);font-weight:700;margin-right:8px}
-.box-right .new{color:var(--green);font-weight:900;font-size:22px}
-.obs{font-size:13px;color:var(--muted);margin-top:8px}
-
-/* FAQ */
-.faq{padding:14px 0}
-.faq details{background:#fff;padding:12px;border-radius:10px;margin-bottom:8px;box-shadow:0 10px 24px rgba(0,0,0,0.04)}
-.faq summary{font-weight:700;cursor:pointer}
-.faq p{margin:10px 0 0;color:#333}
-
-/* FOOTER */
-.footer{padding:22px 0;text-align:center;color:var(--muted);font-size:13px}
-
-/* Desktop layout adjustments */
-@media(min-width:900px){
-  .hero-grid{grid-template-columns:1fr 420px;align-items:center}
-  .recebe-grid{grid-template-columns:repeat(3,1fr)}
-  .modulos .modulos-grid{grid-template-columns:repeat(3,1fr)}
-  .oferta-box{grid-template-columns:420px 1fr}
-  .provas-grid img{width:140px;height:100px}
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Sticky mobile CTA */
-.sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:120;gap:12px;background:linear-gradient(90deg,var(--green),#06a35a);padding:10px;border-radius:12px;align-items:center;justify-content:space-between;box-shadow:0 18px 50px rgba(0,0,0,0.18)}
-.sticky-cta .price{font-weight:900;color:#fff}
-.sticky-cta .cta{background:transparent;border:0;color:#fff;font-weight:800}
+/* HEADER */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header-inner a {
+  text-decoration: none;
+  color: var(--brown);
+  font-weight: 700;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--brown);
+  font-weight: 600;
+}
 
-/* Accessibility */
-a:focus,button:focus{outline:3px solid rgba(212,175,55,0.18);outline-offset:2px}
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, #fff, #f8f4f1);
+  padding: 40px 0;
+}
+.hero-text h1 {
+  font-family: var(--ff-title);
+  color: var(--brown);
+  font-size: 36px;
+  margin: 0 0 12px;
+}
+.subtitle {
+  color: #444;
+  margin-bottom: 16px;
+}
+.hero-image {
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.14);
+}
 
-/* Tiny helpers for spacing */
-.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mb-12{margin-bottom:12px}
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-weight: 800;
+  border-radius: 10px;
+}
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+.btn-outline {
+  border: 2px solid var(--green);
+  color: var(--green);
+}
 
-/* Clean up unnecessary heavy styles from original */
-/* No decorative seals, no heavy gradients, no large shadows */
+/* FEATURES */
+.feature-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  font-weight: 600;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+}
+
+/* TESTEMUNHOS */
+.testimonials-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.testimonial-click {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.testimonial-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.8);
+  z-index: 1000;
+}
+.testimonial-modal img {
+  max-width: 92%;
+  max-height: 88%;
+  border-radius: 10px;
+}
+.testimonial-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* OFERTA */
+.offer-box {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.price {
+  font-size: 24px;
+  color: var(--green);
+  font-weight: 800;
+}
+.offer-image { border-radius: 12px; }
+
+/* FAQ */
+.faq-section details {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+}
+.faq-section summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #fff;
+  color: #6b6b6b;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+/* RESPONSIVO */
+@media(max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .offer-box {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid { justify-content: center; }
+  #main-nav { display: none; }
+  .menu-hamburger { display: block !important; }
+  #main-nav.open {
+    display: flex !important;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+@media(max-width: 600px) {
+  .feature-card { font-size: 14px; }
+  .price { font-size: 20px; }
+}
