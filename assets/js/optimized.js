@@ -1,9 +1,5 @@
 // ====== JS FINAL OTIMIZADO ======
-// Arquivo: assets/js/optimized.js
-// Funções essenciais: menu mobile, modal dos depoimentos
-// ==========================================================
 
-// MENU MOBILE
 const menuHamburger = document.getElementById("menu-hamburger");
 const mainNav = document.getElementById("main-nav");
 
@@ -13,7 +9,7 @@ if (menuHamburger) {
   });
 }
 
-// MODAL DE DEPOIMENTOS
+// Modal de depoimentos
 const modal = document.querySelector(".testimonial-modal");
 const modalImg = modal ? modal.querySelector("img") : null;
 const modalClose = modal ? modal.querySelector(".testimonial-modal-close") : null;
