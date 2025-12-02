@@ -6,28 +6,25 @@
   <title>50 Receitas de Ouro — Renda Extra no Natal</title>
   <meta name="description" content="50 Receitas de Ouro — receitinhas fáceis, baratas e prontas para vender no Natal. Acesso imediato." />
   <style>
-    :root{
-      --bg: linear-gradient(180deg, #ff4d00, #b30000); /* gradiente vermelho natalino */
-      --card:#0f0f0f;
-      --accent:#d4af37;
-      --muted:#bdbdbd;
-      --white:#ffffff;
-      --radius:14px;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    :root {
+      --bg: linear-gradient(180deg, #2f4f4f, #3e5b6f); /* Gradiente de verde escuro e cinza */
+      --card: #1e3a3a; /* Fundo mais escuro para cards */
+      --accent: #d4af37; /* Dourado para detalhes */
+      --muted: #bdbdbd; /* Cinza mais suave */
+      --white: #ffffff;
+      --radius: 14px;
     }
-    html,body{
+    html,body {
       height:100%;
       margin:0;
       background: var(--bg);
       color: var(--white);
     }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:820px;margin:0 auto;padding:20px}
+    a {color:inherit;text-decoration:none}
+    .container {max-width:820px;margin:0 auto;padding:20px}
 
     /* HERO */
-    .hero{
+    .hero {
       display:flex;
       gap:18px;
       align-items:center;
@@ -36,71 +33,94 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent);
       box-shadow:0 6px 18px rgba(0,0,0,0.6);
     }
-    .hero-left{flex:1}
-    .kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,0.25);color:var(--muted);font-weight:600;font-size:13px}
-    h1{font-size:22px;line-height:1.06;margin:12px 0 6px;font-weight:800}
-    p.lead{margin:0 0 12px;color:var(--muted);font-size:15px}
-    .btn{display:inline-block;padding:12px 16px;border-radius:10px;background:var(--accent);color:#071114;font-weight:800;letter-spacing:0.2px}
-    .price{display:inline-block;margin-left:12px;background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;font-weight:700}
-    .hero-right{width:140px;flex-shrink:0;text-align:center}
-    .hero-right img{width:100%;height:auto;border-radius:10px;display:block;margin:0 auto}
+    .hero-left {flex:1}
+    .kicker {display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,0.25);color:var(--muted);font-weight:600;font-size:13px}
+    h1 {font-size:22px;line-height:1.06;margin:12px 0 6px;font-weight:800}
+    p.lead {margin:0 0 12px;color:var(--muted);font-size:15px}
+    .btn {display:inline-block;padding:12px 20px;border-radius:10px;background:var(--accent);color:#071114;font-weight:800;letter-spacing:0.2px;text-transform: uppercase;transition: background 0.3s;}
+    .btn:hover {background: #e76f51;} /* Cor vibrante para o hover */
+    .price {display:inline-block;margin-left:12px;background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;font-weight:700}
+    .hero-right {width:140px;flex-shrink:0;text-align:center}
+    .hero-right img {width:100%;height:auto;border-radius:10px;display:block;margin:0 auto}
 
     /* SECTIONS */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-top:18px}
-    .grid{display:grid;gap:12px}
-    .bullets{display:flex;flex-direction:column;gap:8px}
-    .bullet{display:flex;gap:10px;align-items:flex-start}
-    .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:6px}
+    .card {background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-top:18px}
+    .grid {display:grid;gap:12px}
+    .bullets {display:flex;flex-direction:column;gap:8px}
+    .bullet {display:flex;gap:10px;align-items:flex-start}
+    .dot {width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:6px}
 
     /* depoimentos */
-    .testimonials{
+    .testimonials {
       display:grid;
       grid-template-columns:1fr 1fr 1fr;
       gap:12px;
       justify-items:center;
     }
-    .testimonials img{width:100%;max-width:240px;border-radius:8px}
-    .small{font-size:13px;color:var(--muted)}
+    .testimonials img {width:100%;max-width:240px;border-radius:8px}
+    .small {font-size:13px;color:var(--muted)}
 
     /* oferta final */
-    .offer{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:18px;border-radius:12px}
-    .big-price{font-weight:900;font-size:22px}
-    .cta-wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center}
+    .offer {display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:18px;border-radius:12px}
+    .big-price {font-weight:900;font-size:26px}
+    .cta-wrap {display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center}
 
     /* footer / faq */
-    .faq{margin-top:10px;font-size:14px;color:var(--muted)}
-    .faq-item{margin-top:8px}
-    .faq-question{
+    .faq {margin-top:10px;font-size:14px;color:var(--muted)}
+    .faq-question {
       background:none;
       border:none;
       color: var(--white);
-      font-size: 15px;
+      font-size: 16px;
       cursor:pointer;
       text-align:left;
       font-weight: bold;
-      padding: 8px 0;
+      padding: 10px 0;
     }
-    .faq-answer{
+    .faq-answer {
       display:none;
+      font-size: 14px;
       margin-top:6px;
     }
 
     /* CARROSSEL MÓDULOS */
-    .carousel { overflow: hidden; position: relative; width: 100%; }
-    .carousel-track { display: flex; gap: 12px; transition: transform 0.3s linear; }
-    .slide { min-width: 85%; flex-shrink: 0; border-radius: 12px; overflow: hidden; }
-    .slide img { width: 100%; height: auto; max-height: 220px; object-fit: cover; display: block; border-radius: 12px; }
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 720px; /* Tamanho do container ajustado */
+      margin: 0 auto;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 10px;
+      transition: transform 0.3s ease;
+    }
+    .slide {
+      min-width: 150px; /* Tamanho das imagens ajustado para exibir completamente */
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+      max-height: 180px; /* Altura ajustada */
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
 
     /* responsividade */
     @media(min-width:820px){
-      h1{font-size:32px}
-      .hero{padding:28px}
-      .hero-right{width:220px}
-      .testimonials{grid-template-columns:repeat(3,1fr)}
-      .container{padding:32px}
+      h1 {font-size:32px}
+      .hero {padding:28px}
+      .hero-right {width:220px}
+      .testimonials {grid-template-columns:repeat(3,1fr)}
+      .container {padding:32px}
     }
     @media(max-width:820px){
-      .testimonials { display: flex; flex-direction: column; gap: 12px; align-items:center; }
+      .testimonials {display:flex;flex-direction:column;gap:12px;align-items:center;}
     }
   </style>
 </head>
@@ -177,11 +197,11 @@
 
     <!-- OFERTA -->
     <section class="card offer" aria-label="oferta" id="checkout">
-      <h3 style="margin:0">Oferta Especial de Natal</h3>
+      <h3 style="margin:0 0 12px">Oferta Exclusiva de Natal</h3>
       <div class="big-price">Hoje por apenas <strong>R$ 16,90</strong></div>
       <p class="small">Acesso imediato — material digital. Garantia de 7 dias.</p>
       <div class="cta-wrap">
-        <a class="btn" href="https://pay.kiwify.com.br/XYXtV6d" id="cta-buy">SIM, EU QUERO GANHAR DINHEIRO NO NATAL</a>
+        <a class="btn" href="https://pay.kiwify.com.br/XYXtV6d" id="cta-buy">SIM, EU QUERO COMEÇAR A VENDER AGORA!</a>
       </div>
       <p style="margin-top:8px;font-size:13px;color:var(--muted)">Ao clicar em comprar você será levado ao checkout seguro para finalizar a compra.</p>
     </section>
@@ -189,7 +209,7 @@
     <!-- GARANTIA -->
     <section class="card" aria-label="garantia">
       <div style="display:flex;align-items:center;gap:12px">
-        <img src="assets/images/garantia30.webp" alt="Garantia de 30 dias" style="width:48px;height:48px"/>
+        <img src="assets/images/garantia30.webp" alt="Garantia de 30 dias" style="width:70px;height:70px;border-radius:50%;border:3px solid var(--accent)"/>
         <div>
           <h4 style="margin:0 0 4px">Garantia de 30 dias</h4>
           <p class="small" style="margin:0">Se não estiver satisfeito, devolvemos seu dinheiro. Totalmente sem risco.</p>
@@ -212,10 +232,17 @@
         <button class="faq-question">Preciso de equipamentos profissionais?</button>
         <div class="faq-answer small">Não. Dá pra fazer na cozinha de casa.</div>
       </div>
+      <div class="faq-item">
+        <button class="faq-question">Qual a duração do acesso ao material?</button>
+        <div class="faq-answer small">O acesso é vitalício. Você pode acessar sempre que precisar.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Posso usar essas receitas para vender em qualquer lugar?</button>
+        <div class="faq-answer small">Sim. As receitas são perfeitas para vendas em qualquer lugar, seja online ou presencialmente.</div>
+      </div>
     </section>
 
     <footer style="margin-top:18px;text-align:center;color:var(--muted);font-size:13px">© 2025 — 50 Receitas de Ouro</footer>
-
   </main>
 
   <script>
