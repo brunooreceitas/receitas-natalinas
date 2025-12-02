@@ -1,151 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Receitas de Ouro — Lucre no Natal</title>
-  <meta name="description" content="50 receitas natalinas + método prático para produzir e vender no Natal. Acesso imediato.">
 
-  <!-- Favicon (usa a logo de perfil já no repo) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/webp" href="assets/images/logodoperfil.webp">
 
-  <!-- Meta Pixel (troque SEU_PIXEL_ID_AQUI pelo ID real) -->
+  <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq) return;
+      n=f.fbq=function() { n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
+      if(!f._fbq) f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    try { fbq('init', 'SEU_PIXEL_ID_AQUI'); fbq('track', 'PageView'); } catch(e){}
+    fbq('init', 'SEU_PIXEL_ID_AQUI'); 
+    fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel -->
-
-  <!-- Styles (separado) -->
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/optimized.css">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner" style="display:flex;align-items:center;gap:16px;">
-      <a href="#hero" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-        <img src="assets/images/logodoperfil.webp" alt="Logo Receitas de Ouro" class="brand-img" style="width:56px;height:56px;border-radius:8px;object-fit:cover;">
-        <span style="color:#2d1a06;font-weight:800;font-family: 'Marcellus', serif;">Receitas de Ouro</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand">
+        <img src="assets/images/logodoperfil.webp" class="brand-img" alt="Logo Receitas de Ouro">
       </a>
 
-      <nav id="main-nav" class="main-nav" style="margin-left:auto;display:flex;gap:14px;align-items:center;">
+      <!-- Menu hamburguer -->
+      <div id="menu-hamburger" class="menu-hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <nav id="main-nav" class="main-nav">
+        <a href="#hero">Início</a>
         <a href="#beneficios">Benefícios</a>
         <a href="#depoimentos">Depoimentos</a>
-        <a href="#oferta">Oferta</a>
         <a href="#faq">FAQ</a>
         <a class="btn btn-outline" href="https://pay.kiwify.com.br/XYXtV6d" target="_blank" rel="noopener">Comprar</a>
       </nav>
-
-      <!-- menu hamburger (JS controla exibição em mobile) -->
-      <button id="menu-hamburger" class="menu-hamburger" aria-label="Abrir menu" style="display:none;background:transparent;border:none;">
-        <span class="bar" style="display:block;width:28px;height:3px;background:#222;margin:4px 0;border-radius:2px"></span>
-        <span class="bar" style="display:block;width:20px;height:3px;background:#222;margin:4px 0;border-radius:2px"></span>
-        <span class="bar" style="display:block;width:24px;height:3px;background:#222;margin:4px 0;border-radius:2px"></span>
-      </button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main>
-    <section id="hero" class="hero" aria-labelledby="hero-title" style="padding:36px 0;">
-      <div class="container hero-grid" style="display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;">
-        <div class="hero-text">
-          <h1 id="hero-title" style="font-family:'Marcellus',serif;color:#2d1a06;font-size:36px;margin:0 0 12px;">50 Receitas Natalinas Para Vender Muito</h1>
-          <p class="subtitle" style="margin:0 0 16px;color:#444;">Receitas fáceis, lucrativas e com entrega imediata — aprenda panetones, chocotones, trufas e kits para vender no Natal.</p>
-
-          <ul class="bullets" style="display:flex;gap:10px;padding:0;list-style:none;margin:0 0 16px;">
-            <li style="background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06);font-weight:700;">📘 50 receitas</li>
-            <li style="background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06);font-weight:700;">💬 Scripts prontos</li>
-            <li style="background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06);font-weight:700;">🏷️ Embalagens</li>
-          </ul>
-
-          <div style="display:flex;gap:12px;align-items:center;">
-            <a class="btn btn-primary" href="https://pay.kiwify.com.br/XYXtV6d" style="background:#03b367;color:#fff;padding:14px 18px;border-radius:10px;font-weight:800;text-decoration:none;">COMPRAR — R$16,90</a>
-            <a class="btn btn-outline" href="#oferta" style="padding:12px 16px;border:2px solid #03b367;color:#03b367;border-radius:10px;text-decoration:none;">Ver oferta</a>
-          </div>
-
-          <p class="garantia" style="color:#6b6b6b;margin-top:10px;font-size:13px;">Acesso imediato • Garantia incondicional de 7 dias</p>
-        </div>
-
-        <div class="hero-media" style="display:flex;justify-content:center;">
-          <img src="assets/images/hero.webp" alt="Receitas Natalinas" style="width:100%;max-width:380px;border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,0.12);">
-        </div>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>50 Receitas Natalinas Para Vender Muito</h1>
+        <p class="subtitle">Aprenda receitas lucrativas, fáceis e rápidas para faturar no Natal. Passo a passo simples + fotos ilustradas.</p>
+        <a class="btn btn-primary" href="https://pay.kiwify.com.br/XYXtV6d">COMPRAR POR R$16,90</a>
       </div>
-    </section>
-
-    <!-- BENEFÍCIOS / O QUE VOCÊ RECEBE -->
-    <section id="beneficios" class="section" style="padding:28px 0;background:#fff;">
-      <div class="container">
-        <h2 style="margin:0 0 12px;">O que você recebe</h2>
-        <div class="features-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
-          <div class="feature-card" style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,0.06);">50 receitas completas e testadas</div>
-          <div class="feature-card" style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,0.06);">Passo a passo simples</div>
-          <div class="feature-card" style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,0.06);">Modelos de embalagem</div>
-        </div>
+      <div class="hero-media">
+        <img src="assets/images/hero.webp" alt="Receitas Natalinas" class="hero-image">
       </div>
-    </section>
-
-    <!-- DEPOIMENTOS -->
-    <section id="depoimentos" class="section" style="padding:28px 0;">
-      <div class="container">
-        <h2 style="margin:0 0 16px;">Quem já comprou aprovou!</h2>
-        <div class="testimonials-grid" style="display:flex;gap:12px;align-items:center;">
-          <img src="assets/images/dep1.webp" class="testimonial-click" data-img="assets/images/dep1.webp" alt="Depoimento 1" style="width:180px;height:120px;object-fit:cover;border-radius:10px;">
-          <img src="assets/images/dep2.webp" class="testimonial-click" data-img="assets/images/dep2.webp" alt="Depoimento 2" style="width:180px;height:120px;object-fit:cover;border-radius:10px;">
-          <img src="assets/images/dep3.webp" class="testimonial-click" data-img="assets/images/dep3.webp" alt="Depoimento 3" style="width:180px;height:120px;object-fit:cover;border-radius:10px;">
-        </div>
-
-        <!-- modal de depoimento -->
-        <div class="testimonial-modal" style="display:none;position:fixed;inset:0;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);z-index:900;">
-          <button class="testimonial-modal-close" style="position:absolute;top:18px;right:18px;font-size:28px;color:#fff;background:transparent;border:none;">×</button>
-          <img src="" alt="Depoimento ampliado" style="max-width:92%;max-height:88%;border-radius:8px;">
-        </div>
-      </div>
-    </section>
-
-    <!-- OFERTA -->
-    <section id="oferta" class="section" style="padding:28px 0;background:#fff;">
-      <div class="container" style="display:grid;grid-template-columns:360px 1fr;gap:20px;align-items:center;">
-        <img src="assets/images/ebook.webp" alt="E-book Receitas de Ouro" style="width:100%;max-width:320px;border-radius:12px;">
-        <div>
-          <h3 style="margin:0 0 8px;">Receitas de Ouro — Acesso Imediato</h3>
-          <p style="margin:0 0 12px;font-size:20px;color:#03b367;font-weight:800;">R$16,90</p>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/XYXtV6d" style="background:#03b367;color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:800;">GARANTIR MINHA OFERTA</a>
-          <p style="margin-top:10px;color:#6b6b6b;font-size:13px;">Acesso imediato • Garantia de 7 dias • Oferta por tempo limitado</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section" style="padding:18px 0;">
-      <div class="container">
-        <h2 style="margin:0 0 12px;">Perguntas frequentes</h2>
-        <details style="background:#fff;padding:12px;border-radius:10px;margin-bottom:8px;"><summary style="font-weight:700;cursor:pointer;">É fácil de fazer?</summary><p style="margin-top:8px;">Sim! Todas as receitas são explicadas passo a passo.</p></details>
-        <details style="background:#fff;padding:12px;border-radius:10px;margin-bottom:8px;"><summary style="font-weight:700;cursor:pointer;">O acesso é imediato?</summary><p style="margin-top:8px;">Sim — você recebe tudo por e-mail após o pagamento.</p></details>
-        <details style="background:#fff;padding:12px;border-radius:10px;margin-bottom:8px;"><summary style="font-weight:700;cursor:pointer;">Posso vender com essas receitas?</summary><p style="margin-top:8px;">Sim — receitas escolhidas para alta demanda e margem.</p></details>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer" style="padding:22px 0;background:#fff;text-align:center;color:#6b6b6b;">
-    <div class="container">
-      © <span id="year"></span> Receitas de Ouro — Todos os direitos reservados.
     </div>
-  </footer>
+  </section>
 
-  <!-- Scripts (separados) -->
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="assets/js/optimized.js" defer></script>
+  <!-- O que você recebe -->
+  <section id="beneficios" class="section">
+    <div class="container">
+      <h2>O que você recebe</h2>
+      <div class="features-grid">
+        <div class="feature-card">50 receitas completas e testadas</div>
+        <div class="feature-card">Modo de preparo simples e direto</div>
+        <div class="feature-card">Lista de ingredientes + medidas</div>
+        <div class="feature-card">Fotos de referência</div>
+        <div class="feature-card">Ideias de venda e preços</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <h2>Quem já comprou, aprovou!</h2>
+      <div class="testimonials-grid">
+        <img src="assets/images/dep1.webp" class="testimonial-click" data-img="assets/images/dep1.webp" alt="Depoimento 1">
+        <img src="assets/images/dep2.webp" class="testimonial-click" data-img="assets/images/dep2.webp" alt="Depoimento 2">
+        <img src="assets/images/dep3.webp" class="testimonial-click" data-img="assets/images/dep3.webp" alt="Depoimento 3">
+      </div>
+      <div class="testimonial-modal">
+        <span class="testimonial-modal-close">×</span>
+        <img src="" alt="Depoimento ampliado">
+      </div>
+    </div>
+  </section>
+
+  <!-- Oferta -->
+  <section id="oferta" class="section">
+    <div class="container offer-box">
+      <img src="assets/images/ebook.webp" class="offer-image" alt="E-book Receitas de Ouro">
+      <div class="offer-info">
+        <h3>Receitas de Ouro — Acesso Imediato</h3>
+        <p class="price">R$16,90</p>
+        <a class="btn btn-primary" href="https://pay.kiwify.com.br/XYXtV6d">GARANTIR AGORA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2>Perguntas frequentes</h2>
+      <details>
+        <summary>É fácil de fazer?</summary>
+        <p>Sim! Todas as receitas são nível iniciante.</p>
+      </details>
+      <details>
+        <summary>O acesso é imediato?</summary>
+        <p>Sim, assim que o pagamento aprovar.</p>
+      </details>
+      <details>
+        <summary>Posso vender com essas receitas?</summary>
+        <p>Sim. São receitas lucrativas feitas para vendas locais.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="assets/js/optimized.js"></script>
 </body>
 </html>
