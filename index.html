@@ -10,8 +10,6 @@
       --dark: #0d0d0d;
       --light: #ffffff;
       --muted: #d2d2d2;
-      --bg-offer: #1e1e1e;  /* Cor de fundo da oferta */
-      --bg-guarantee: #2a2a2a; /* Fundo da garantia */
     }
     body {
       margin: 0;
@@ -137,7 +135,7 @@
       text-align:center;
       max-width: 900px;
       margin: 0 auto;
-      background: var(--bg-offer);
+      background: #1e1e1e;
       border-radius: 12px;
       color: var(--light);
     }
@@ -166,8 +164,6 @@
       text-align:center;
       max-width: 900px;
       margin: 0 auto;
-      background: var(--bg-guarantee);
-      border-radius: 12px;
       color: var(--light);
       margin-top: 30px;
     }
@@ -294,21 +290,21 @@
       <div class="preco">
         <span class="preco-antigo">R$ 47,00</span> R$ 16,90
       </div>
-      <a href="#checkout" class="btn">QUERO VENDER NESSE NATAL</a>
-
-      <div class="selo-group">
-        <img src="assets/images/selo-1.png" alt="Pagamento seguro">
-        <img src="assets/images/selo-2.webp" alt="Acesso imediato">
-        <img src="assets/images/selogarantia30dias.webp" alt="Garantia">
-      </div>
+      <a href="#checkout" class="btn">QUERO GARANTIR MINHA CÓPIA</a>
     </div>
   </div>
 </section>
 
+<!-- MOVI OS SELOS PARA AQUI (GARANTIA) -->
 <section class="garantia">
   <div>
     <h2>Garantia de 30 Dias — Sem Risco!</h2>
     <p>Se não ficar satisfeito, garantimos seu dinheiro de volta. Sem complicação.</p>
+  </div>
+  <div class="selo-group">
+    <img src="assets/images/selo-1.png" alt="Pagamento seguro">
+    <img src="assets/images/selo-2.webp" alt="Acesso imediato">
+    <img src="assets/images/selogarantia30dias.webp" alt="Garantia">
   </div>
 </section>
 
