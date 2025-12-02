@@ -29,7 +29,7 @@
       padding: 20px;
     }
 
-/* HERO — imagem centralizada logo abaixo da Black Friday */
+/* HERO — imagem e conteúdo centralizados */
 .hero {
   display: flex;
   flex-direction: column;
@@ -42,13 +42,43 @@
   text-align: center;
 }
 
-.hero-top { max-width: 760px; }
-.kicker { display:inline-block; padding:6px 10px; border-radius:999px;
-  background: rgba(0,0,0,0.25); color: var(--muted); font-weight:600; font-size:13px; }
-.hero h1 { font-size:32px; line-height:1.06; margin:12px 0 6px; font-weight:800; }
-.hero p.lead { margin:0 0 12px; color: var(--muted); font-size:15px; }
-.hero-cta { display:flex; align-items:center; gap:8px; margin-top:8px;
-  flex-wrap:wrap; justify-content:center; }
+.hero-top {
+  max-width: 760px;
+  width: 100%;
+}
+
+.kicker {
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(0,0,0,0.25);
+  color: var(--muted);
+  font-weight:600;
+  font-size:13px;
+}
+
+.hero h1 {
+  font-size:32px;
+  line-height:1.06;
+  margin:12px 0 6px;
+  font-weight:800;
+}
+
+.hero p.lead {
+  margin:0 0 12px;
+  color: var(--muted);
+  font-size:15px;
+}
+
+.hero-cta {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
 .hero-cta .btn {
   background-color: var(--accent);
   color: #071114;
@@ -59,19 +89,28 @@
   cursor: pointer;
   text-decoration: none;
 }
-.hero-cta .btn:hover { opacity: 0.9; }
+
+.hero-cta .btn:hover {
+  opacity: 0.9;
+}
+
 .price {
   font-size: 18px;
   font-weight: 600;
   margin-left: 12px;
 }
-.hero-small { margin-top:8px; font-size:13px; color: var(--muted); }
 
-/* AJUSTE REAL DO TAMANHO DA IMAGEM */
+.hero-small {
+  margin-top:8px;
+  font-size:13px;
+  color: var(--muted);
+}
+
+/* --- Aqui: ajuste da área da imagem --- */
 .hero-right {
   width: 100%;
-  max-width: 340px; /* ↓↓ TAMANHO IDEAL ↓↓ */
-  margin-top: 12px;
+  max-width: 360px; /* limite máximo mais adequado para hero */
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -83,6 +122,7 @@
   margin: 0 auto;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
+
 
     /* SECTIONS comuns */
     .card { background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
