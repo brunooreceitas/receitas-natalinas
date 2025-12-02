@@ -1,4 +1,4 @@
-<!-- LANDING PAGE BRASILEIRA PADRÃO DE ALTA CONVERSÃO -->
+<!-- LANDING PAGE BRASILEIRA PADRÃO DE ALTA CONVERSÃO (COM 3 MICRO SELOS) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,7 +22,7 @@
   }
   a { text-decoration: none; color: inherit; }
 
-  /* HEADER SIMPLES */
+  /* HEADER */
   header {
     padding: 14px 22px;
     background: #0f0f0f;
@@ -41,8 +41,8 @@
   }
   .hero-right {
     width: 100%;
-    max-width: 360px;
-    margin: 0 auto 20px;
+    max-width: 350px;
+    margin: 0 auto 16px;
   }
   .hero-right img {
     width: 100%; height: auto; border-radius: 12px;
@@ -69,7 +69,20 @@
     margin-top: 6px;
   }
 
-  /* SEÇÃO PROVAS SOCIAIS */
+  /* MICRO-SELOS */
+  .micro-selos {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .micro-selos img {
+    width: 82px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  }
+
+  /* SEÇÃO PROVAS */
   .provas {
     padding: 40px 20px;
     max-width: 900px;
@@ -88,20 +101,16 @@
   .provas-grid img {
     width: 100%; height:auto; border-radius:10px;
   }
-  @media(max-width:700px){
-    .provas-grid { grid-template-columns: 1fr; }
-  }
+  @media(max-width:700px){ .provas-grid { grid-template-columns: 1fr; } }
 
-  /* SEÇÃO BENEFÍCIOS */
+  /* BENEFÍCIOS */
   .beneficios {
     padding: 40px 22px;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
   }
-  .beneficios h2 {
-    font-size: 26px;
-  }
+  .beneficios h2 { font-size: 26px; }
   .beneficios-list {
     margin-top: 22px;
     display: grid;
@@ -115,7 +124,7 @@
     text-align:left;
   }
 
-  /* SEÇÃO OFERTA */
+  /* OFERTA */
   .oferta {
     padding: 50px 22px;
     text-align:center;
@@ -150,9 +159,8 @@
   <h1>Aprenda 50 Receitas Rápidas e Lucrativas Para o Natal</h1>
   <p class="lead">Receitas testadas, práticas, baratas e prontas para vender e lucrar ainda em dezembro — mesmo começando do zero.</p>
   <a href="#checkout" class="btn">QUERO COMEÇAR AGORA</a>
-</section>
 
-<section class="provas">
+<section class="provas" id="provas">
   <h2>Mais de 1.200 alunos já lucraram com estas receitas</h2>
   <div class="provas-grid">
     <img src="assets/images/prova1.jpg" />
@@ -173,10 +181,17 @@
   </div>
 </section>
 
-<section class="oferta">
+<section class="oferta" id="checkout">
   <h2>Acesso imediato — Black Friday especial</h2>
   <div class="preco">R$ 16,90</div>
   <a href="#checkout" class="btn">QUERO GARANTIR MINHA CÓPIA</a>
+
+  <!-- MICRO SELOS REPETIDOS NA OFERTA -->
+  <div class="micro-selos" style="margin-top: 26px;">
+    <img src="assets/images/selo-1.png" />
+    <img src="assets/images/selo-2.png" />
+    <img src="assets/images/selo-3.png" />
+  </div>
 </section>
 
 <footer>
