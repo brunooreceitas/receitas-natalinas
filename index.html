@@ -1,4 +1,3 @@
-<!-- LANDING PAGE BRASILEIRA PADRÃO DE ALTA CONVERSÃO (COM 3 MICRO SELOS) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -95,13 +94,17 @@
   }
   .provas-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 18px;
   }
   .provas-grid img {
     width: 100%; height:auto; border-radius:10px;
   }
-  @media(max-width:700px){ .provas-grid { grid-template-columns: 1fr; } }
+  @media(max-width:700px){
+    .provas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
   /* BENEFÍCIOS */
   .beneficios {
@@ -146,6 +149,39 @@
     font-size: 14px;
     margin-top:40px;
   }
+
+  /* DEPOIMENTOS - layout moderno */
+  .depoimentos {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .depoimentos h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
+    font-weight: 800;
+  }
+  .depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .dep-item img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+  @media (max-width: 900px) {
+    .depoimentos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .depoimentos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 <body>
@@ -159,13 +195,14 @@
   <h1>Aprenda 50 Receitas Rápidas e Lucrativas Para o Natal</h1>
   <p class="lead">Receitas testadas, práticas, baratas e prontas para vender e lucrar ainda em dezembro — mesmo começando do zero.</p>
   <a href="#checkout" class="btn">QUERO COMEÇAR AGORA</a>
+</section>
 
 <section class="provas" id="provas">
   <h2>Mais de 1.200 alunos já lucraram com estas receitas</h2>
   <div class="provas-grid">
-    <img src="assets/images/depo1.webp" />
-    <img src="assets/images/depo2.webp" />
-    <img src="assets/images/depo3.webp" />
+    <div class="dep-item"><img src="assets/images/depo1.webp" alt="Depoimento 1" /></div>
+    <div class="dep-item"><img src="assets/images/depo2.webp" alt="Depoimento 2" /></div>
+    <div class="dep-item"><img src="assets/images/depo3.webp" alt="Depoimento 3" /></div>
   </div>
 </section>
 
@@ -188,11 +225,9 @@
 
 <section class="oferta" id="checkout">
   <div class="oferta-wrap">
-
     <div class="oferta-img">
       <img src="assets/images/ebook.webp" alt="Mockup do e-book 50 Receitas de Ouro">
     </div>
-
     <div class="oferta-info">
       <h2>Acesso imediato — Black Friday especial</h2>
       <div class="preco">R$ 16,90</div>
@@ -204,10 +239,8 @@
         <img src="assets/images/selogarantia30dias.webp" alt="Garantia">
       </div>
     </div>
-
   </div>
 </section>
-
 
 <footer>
   © 2025 Receitas de Ouro. Todos os direitos reservados.
