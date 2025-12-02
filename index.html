@@ -10,6 +10,8 @@
       --dark: #0d0d0d;
       --light: #ffffff;
       --muted: #d2d2d2;
+      --bg-offer: #1e1e1e;  /* Cor de fundo da oferta */
+      --bg-guarantee: #2a2a2a; /* Fundo da garantia */
     }
     body {
       margin: 0;
@@ -135,14 +137,39 @@
       text-align:center;
       max-width: 900px;
       margin: 0 auto;
-      background: #1e1e1e;
+      background: var(--bg-offer);
       border-radius: 12px;
+      color: var(--light);
+    }
+    .oferta-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
     .preco {
       font-size: 38px;
       font-weight: 800;
       margin: 16px 0;
       color: var(--accent);
+    }
+    .preco-antigo {
+      text-decoration: line-through;
+      font-size: 20px;
+      color: var(--muted);
+      margin-right: 10px;
+    }
+
+    /* GARANTIA */
+    .garantia {
+      padding: 50px 22px;
+      text-align:center;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg-guarantee);
+      border-radius: 12px;
+      color: var(--light);
+      margin-top: 30px;
     }
 
     /* FOOTER */
@@ -264,8 +291,10 @@
     </div>
     <div class="oferta-info">
       <h2>Acesso imediato — Black Friday especial</h2>
-      <div class="preco">R$ 16,90</div>
-      <a href="#checkout" class="btn">QUERO COMEÇAR A VENDER NO NATAL</a>
+      <div class="preco">
+        <span class="preco-antigo">R$ 47,00</span> R$ 16,90
+      </div>
+      <a href="#checkout" class="btn">QUERO GARANTIR MINHA CÓPIA</a>
 
       <div class="selo-group">
         <img src="assets/images/selo-1.png" alt="Pagamento seguro">
@@ -273,6 +302,13 @@
         <img src="assets/images/selogarantia30dias.webp" alt="Garantia">
       </div>
     </div>
+  </div>
+</section>
+
+<section class="garantia">
+  <div>
+    <h2>Garantia de 30 Dias — Sem Risco!</h2>
+    <p>Se não ficar satisfeito, garantimos seu dinheiro de volta. Sem complicação.</p>
   </div>
 </section>
 
