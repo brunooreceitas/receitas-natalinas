@@ -111,58 +111,84 @@
       </div>
     </section>
 
-   <!-- MODULOS E BONUS CARROSSEL -->
+<!-- MODULOS E BONUS CARROSSEL -->
 <section class="card" aria-label="modulos" id="modulos">
   <h3 style="margin:0 0 12px">Conteúdo completo do produto</h3>
   <div class="carousel">
     <div class="carousel-track">
 
-      <!-- MÓDULOS -->
-      <div class="slide"><h4>Módulo 1 — Primeiros Passos</h4><p class="small">Como começar do zero, organizar sua produção e se preparar para vender no Natal.</p></div>
-      <div class="slide"><h4>Módulo 2 — Receitas Básicas Para Lucro Alto</h4><p class="small">Receitinhas rápidas, econômicas e com margem alta para começar lucrando ainda hoje.</p></div>
-      <div class="slide"><h4>Módulo 3 — Divulgação de Conteúdo</h4><p class="small">Aprenda como divulgar sem aparecer e atrair clientes usando estratégias simples.</p></div>
-      <div class="slide"><h4>Módulo 4 — Comunicação de Vendas</h4><p class="small">Textos prontos e técnicas rápidas de persuasão para vender mais no final do ano.</p></div>
-      <div class="slide"><h4>Módulo 5 — Estratégias de Pós-venda</h4><p class="small">Como fidelizar clientes e transformar uma compra em clientes recorrentes.</p></div>
-      <div class="slide"><h4>Módulo 6 — 50 Receitas</h4><p class="small">O coração do produto: 50 receitas práticas, deliciosas e perfeitas para vender no Natal.</p></div>
+      <!-- MÓDULOS COM IMAGENS -->
+      <div class="slide"><img src="images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
+      <div class="slide"><img src="images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
+      <div class="slide"><img src="images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
+      <div class="slide"><img src="images/modulo4.webp" alt="Módulo 4 — Comunicação de Vendas"></div>
+      <div class="slide"><img src="images/modulo5.webp" alt="Módulo 5 — Estratégias de Pós-venda"></div>
+      <div class="slide"><img src="images/modulo6.webp" alt="Módulo 6 — 50 Receitas"></div>
 
-      <!-- BÔNUS -->
-      <div class="slide"><h4>Bônus 1 — Panetones e Chocotones Natalinos</h4><p class="small">Receitas especiais para lucrar ainda mais com produtos tradicionais de Natal.</p></div>
-      <div class="slide"><h4>Bônus 2 — Biscoitos Natalinos</h4><p class="small">Modelos fáceis, baratos e extremamente lucrativos para vender em grande quantidade.</p></div>
-      <div class="slide"><h4>Bônus 3 — Ceia Natalina</h4><p class="small">Receitas para quem quer vender pratos completos e lucrar muito no Natal.</p></div>
+      <!-- BÔNUS COM IMAGENS -->
+      <div class="slide"><img src="images/bônus1.webp" alt="Bônus 1 — Panetones e Chocotones Natalinos"></div>
+      <div class="slide"><img src="images/bônus2.webp" alt="Bônus 2 — Biscoitos Natalinos"></div>
+      <div class="slide"><img src="images/bônus3.webp" alt="Bônus 3 — Ceia Natalina"></div>
 
-      <!-- Duplicamos alguns slides para loop infinito -->
-      <div class="slide"><h4>Módulo 1 — Primeiros Passos</h4><p class="small">Como começar do zero, organizar sua produção e se preparar para vender no Natal.</p></div>
-      <div class="slide"><h4>Módulo 2 — Receitas Básicas Para Lucro Alto</h4><p class="small">Receitinhas rápidas, econômicas e com margem alta para começar lucrando ainda hoje.</p></div>
-      <div class="slide"><h4>Módulo 3 — Divulgação de Conteúdo</h4><p class="small">Aprenda como divulgar sem aparecer e atrair clientes usando estratégias simples.</p></div>
+      <!-- DUPLICAMOS PARA LOOP INFINITO -->
+      <div class="slide"><img src="images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
+      <div class="slide"><img src="images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
+      <div class="slide"><img src="images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
 
     </div>
   </div>
 </section>
 
+<style>
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.3s linear;
+}
+
+.slide {
+  min-width: 85%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+</style>
+
 <script>
-  // Carrossel automático, contínuo, ultra leve
-  (function(){
-    const track = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.slide');
-    const gap = 12;
-    let position = 0;
+(function(){
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.slide');
+  const gap = 12;
+  let position = 0;
 
-    function move() {
-      const width = slides[0].offsetWidth + gap;
-      position += 1; // velocidade do carrossel (quanto maior, mais rápido)
-      if(position >= width * (slides.length / 2)) position = 0; // loop infinito
-      track.style.transform = `translateX(-${position}px)`;
-      requestAnimationFrame(move);
-    }
+  function move() {
+    const width = slides[0].offsetWidth + gap;
+    position += 1; // velocidade do carrossel
+    if(position >= width * (slides.length / 2)) position = 0; // loop infinito
+    track.style.transform = `translateX(-${position}px)`;
+    requestAnimationFrame(move);
+  }
 
-    move();
+  move();
 
-    // Pausa ao tocar no mobile (opcional)
-    track.addEventListener('touchstart', () => track.style.animationPlayState = "paused");
-    track.addEventListener('touchend', () => track.style.animationPlayState = "running");
-  })();
+  // Pausa ao tocar no mobile (opcional)
+  track.addEventListener('touchstart', () => track.style.animationPlayState = "paused");
+  track.addEventListener('touchend', () => track.style.animationPlayState = "running");
+})();
 </script>
-
 
     <!-- DOR -->
     <section class="card" aria-label="dor e solução">
