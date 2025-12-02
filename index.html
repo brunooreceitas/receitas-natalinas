@@ -44,9 +44,11 @@
       margin: 0 auto 16px;
     }
     .hero-right img {
-      width: 100%; height: auto; border-radius: 12px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      display:block;
+      display: block;
     }
     .hero h1 {
       font-size: 30px;
@@ -181,6 +183,36 @@
       .depoimentos-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* Correções das imagens */
+    /* Imagem Hero */
+    .hero-right img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Imagem de Oferta */
+    .oferta-img img {
+      width: 80%;  /* Ajuste a largura da imagem */
+      max-width: 400px;  /* Limite de largura */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Imagem dos Selos */
+    .selo-group img {
+      width: 80px;  /* Ajusta o tamanho dos selos */
+      height: auto;
+      margin: 0 10px;
     }
   </style>
 </head>
