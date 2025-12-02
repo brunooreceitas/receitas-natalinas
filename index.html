@@ -7,7 +7,7 @@
   <meta name="description" content="50 Receitas de Ouro — receitinhas fáceis, baratas e prontas para vender no Natal. Acesso imediato." />
   <style>
     :root {
-      --bg: linear-gradient(180deg, #1a1a1a, #0b0b0b); /* gradiente suave de fundo */
+      --bg: linear-gradient(180deg, #b81c28, #e1ad01); /* Fundo natalino (vermelho e dourado) */
       --card: #0f0f0f;
       --accent: #d4af37;
       --muted: #bdbdbd;
@@ -223,6 +223,37 @@
         align-items: center;
       }
     }
+    
+    /* FAQ interativo */
+    .faq-item {
+      cursor: pointer;
+      padding: 12px;
+      background-color: #333;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: background-color 0.3s;
+    }
+    .faq-item:hover {
+      background-color: #444;
+    }
+    .faq-answer {
+      display: none;
+      margin-top: 8px;
+      padding-left: 16px;
+      color: var(--muted);
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Garantia */
+    .guarantee-img {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #d4af37;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -241,76 +272,14 @@
         <p class="small" style="margin-top: 10px">Garantia de 7 dias — risco zero.</p>
       </div>
       <div class="hero-right">
-        <img src="assets/images/hero.webp" alt="Imagem ilustrativa de receitas natalinas" loading="lazy">
+        <img src="assets/images/hero.webp" alt="50 Receitas de Ouro - renda extra no natal" loading="lazy">
       </div>
-    </section>
-
-    <!-- O QUE O CLIENTE RECEBE -->
-    <section class="card" aria-label="o que você recebe">
-      <h2 style="margin: 0 0 8px">O que você vai receber</h2>
-      <div class="grid">
-        <div class="bullets">
-          <div class="bullet"><div class="dot"></div><div>50 receitas natalinas fáceis, baratas e prontas</div></div>
-          <div class="bullet"><div class="dot"></div><div>Lista de ingredientes econômicos e modo de preparo simplificado</div></div>
-          <div class="bullet"><div class="dot"></div><div>Sugestões de preço e estratégias de venda rápidas</div></div>
-          <div class="bullet"><div class="dot"></div><div>Ideias de embalagens e mensagens prontas para vender</div></div>
-          <div class="bullet"><div class="dot"></div><div>Bônus: mini-guia de combos e planilha simples de lucro</div></div>
-        </div>
-      </div>
-      <div style="margin-top: 12px">
-        <a class="btn" href="#checkout" id="cta-middle">QUERO AS 50 RECEITAS AGORA</a>
-      </div>
-    </section>
-
-    <!-- PROVA SOCIAL -->
-    <section class="card" aria-label="depoimentos">
-      <h3 style="margin: 0 0 8px">Pessoas comuns já estão usando essas receitas</h3>
-      <div class="testimonials">
-        <img src="assets/images/depo1.webp" alt="Depoimento 1: Cliente satisfeito com as receitas" />
-        <img src="assets/images/depo2.webp" alt="Depoimento 2: Cliente feliz com o resultado" />
-        <img src="assets/images/depo3.webp" alt="Depoimento 3: Cliente utilizando as receitas no Natal" />
-      </div>
-    </section>
-
-    <!-- MODULOS E BONUS CARROSSEL -->
-    <section class="card" aria-label="modulos" id="modulos">
-      <h3 style="margin: 0 0 12px">Conteúdo completo do produto</h3>
-      <div class="carousel">
-        <div class="carousel-track">
-          <div class="slide"><img src="assets/images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
-          <div class="slide"><img src="assets/images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
-          <div class="slide"><img src="assets/images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
-          <div class="slide"><img src="assets/images/modulo4.webp" alt="Módulo 4 — Comunicação de Vendas"></div>
-          <div class="slide"><img src="assets/images/modulo5.webp" alt="Módulo 5 — Estratégias de Pós-venda"></div>
-          <div class="slide"><img src="assets/images/modulo6.webp" alt="Módulo 6 — 50 Receitas"></div>
-          <div class="slide"><img src="assets/images/bonus1.webp" alt="Bônus 1 — Panetones e Chocotones Natalinos"></div>
-          <div class="slide"><img src="assets/images/bonus2.webp" alt="Bônus 2 — Biscoitos Natalinos"></div>
-          <div class="slide"><img src="assets/images/bonus3.webp" alt="Bônus 3 — Ceia Natalina"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DOR -->
-    <section class="card" aria-label="dor e solução">
-      <h3 style="margin: 0 0 8px">Não sabe o que vender no Natal? Isso resolve.</h3>
-      <p class="small">Se você tem pouco tempo, medo de não vender ou não sabe como precificar, o <strong>50 Receitas de Ouro</strong> te entrega um passo a passo direto para começar a vender hoje mesmo.</p>
-    </section>
-
-    <!-- OFERTA -->
-    <section class="card offer" aria-label="oferta" id="checkout">
-      <h3 style="margin: 0">Oferta Especial de Natal</h3>
-      <div class="big-price">Hoje por apenas <strong>R$ 16,90</strong></div>
-      <p class="small">Acesso imediato — material digital. Garantia de 7 dias.</p>
-      <div class="cta-wrap">
-        <a class="btn" href="https://pay.kiwify.com.br/XYXtV6d" id="cta-buy">SIM, EU QUERO GANHAR DINHEIRO NO NATAL</a>
-      </div>
-      <p style="margin-top: 8px; font-size: 13px; color: var(--muted)">Ao clicar em comprar você será levado ao checkout seguro para finalizar a compra.</p>
     </section>
 
     <!-- GARANTIA -->
     <section class="card" aria-label="garantia">
       <div style="display: flex; align-items: center; gap: 12px">
-        <img src="assets/images/garantia30.webp" alt="Garantia de 30 dias" style="width: 48px; height: 48px" />
+        <img src="assets/images/garantia30.webp" alt="Garantia de 30 dias" class="guarantee-img" />
         <div>
           <h4 style="margin: 0 0 4px">Garantia de 30 dias</h4>
           <p class="small" style="margin: 0">Se não estiver satisfeito, devolvemos seu dinheiro. Totalmente sem risco.</p>
@@ -321,17 +290,25 @@
     <!-- FAQ -->
     <section class="card faq" aria-label="faq">
       <h4 style="margin: 0 0 8px">Perguntas rápidas</h4>
-      <div>
+      <div class="faq-item">
         <strong>Como recebo o material?</strong>
-        <div class="small">Imediatamente após o pagamento, direto no seu e-mail.</div>
+        <div class="faq-answer">Imediatamente após o pagamento, direto no seu e-mail.</div>
       </div>
-      <div style="margin-top: 8px">
+      <div class="faq-item">
         <strong>Serve pra iniciantes?</strong>
-        <div class="small">Sim. As receitas são simples e explicadas passo a passo.</div>
+        <div class="faq-answer">Sim. As receitas são simples e explicadas passo a passo.</div>
       </div>
-      <div style="margin-top: 8px">
+      <div class="faq-item">
         <strong>Preciso de equipamentos profissionais?</strong>
-        <div class="small">Não. Dá pra fazer na cozinha de casa.</div>
+        <div class="faq-answer">Não. Dá pra fazer na cozinha de casa.</div>
+      </div>
+      <div class="faq-item">
+        <strong>Tem alguma receita vegana ou sem glúten?</strong>
+        <div class="faq-answer">Sim, temos algumas opções sem glúten e veganas no material.</div>
+      </div>
+      <div class="faq-item">
+        <strong>Posso vender as receitas online?</strong>
+        <div class="faq-answer">Sim, é possível vender as receitas online, através de plataformas de delivery ou redes sociais.</div>
       </div>
     </section>
 
@@ -340,7 +317,7 @@
   </main>
 
   <script>
-    (function () {
+    (function() {
       var checkout = document.querySelector('#cta-buy');
       var ctaTop = document.querySelector('#cta-top');
       var ctaMiddle = document.querySelector('#cta-middle');
@@ -359,21 +336,13 @@
       if (checkout) checkout.addEventListener('click', goToCheckout);
     })();
 
-    (function () {
-      const track = document.querySelector('.carousel-track');
-      const slides = document.querySelectorAll('.slide');
-      const gap = 12;
-      let position = 0;
-
-      function move() {
-        const slideWidth = slides[0].offsetWidth + gap;
-        position += 0.5;
-        if (position >= slideWidth * (slides.length / 2)) position = 0;
-        track.style.transform = `translateX(-${position}px)`;
-        requestAnimationFrame(move);
-      }
-
-      move();
+    (function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
     })();
   </script>
 </body>
