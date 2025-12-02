@@ -1,102 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Receitas de Ouro - Lucre no Natal</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" href="https://i.postimg.cc/28SpFFRQ/Chat-GPT-Image-27-de-nov-de-2025-12-56-17.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>50 Receitas de Ouro — Renda Extra no Natal</title>
+  <meta name="description" content="50 Receitas de Ouro — receitinhas fáceis, baratas e prontas para vender no Natal. Acesso imediato." />
+  <style>
+    /* Mobile-first, minimalista e leve */
+    :root{
+      --bg:#0b0b0b; /* fundo escuro opcional */
+      --card:#0f0f0f;
+      --accent:#d4af37; /* dourado */
+      --muted:#bdbdbd;
+      --white:#ffffff;
+      --radius:14px;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--white);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:820px;margin:0 auto;padding:20px}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    /* HERO */
+    .hero{display:flex;gap:18px;align-items:center;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);box-shadow:0 6px 18px rgba(0,0,0,0.6);}
+    .hero-left{flex:1}
+    .kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,0.25);color:var(--muted);font-weight:600;font-size:13px}
+    h1{font-size:22px;line-height:1.06;margin:12px 0 6px;font-weight:800}
+    p.lead{margin:0 0 12px;color:var(--muted);font-size:15px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;background:var(--accent);color:#071114;font-weight:800;letter-spacing:0.2px}
+    .price{display:inline-block;margin-left:12px;background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;font-weight:700}
+    .hero-right{width:140px;flex-shrink:0}
+    .hero-right img{width:100%;height:auto;border-radius:10px;display:block}
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+    /* SECTIONS */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-top:18px}
+    .grid{display:grid;gap:12px}
+    .bullets{display:flex;flex-direction:column;gap:8px}
+    .bullet{display:flex;gap:10px;align-items:flex-start}
+    .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:6px}
+
+    /* depoimentos */
+    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .test{padding:12px;border-radius:10px;background:rgba(0,0,0,0.15);font-size:14px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* oferta final */
+    .offer{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:18px;border-radius:12px}
+    .big-price{font-weight:900;font-size:22px}
+    .cta-wrap{display:flex;gap:12px;align-items:center}
+
+    /* footer / faq */
+    .faq{margin-top:10px;font-size:14px;color:var(--muted)}
+
+    /* responsividade */
+    @media(min-width:820px){
+      h1{font-size:32px}
+      .hero{padding:28px}
+      .hero-right{width:220px}
+      .testimonials{grid-template-columns:repeat(3,1fr)}
+      .container{padding:32px}
+    }
+  </style>
 </head>
 <body>
+  <main class="container" role="main">
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a href="#hero" class="brand">
-        <img src="https://i.postimg.cc/RCfzGQ0D/Design-sem-nome-(46)-Photoroom.png" alt="Receitas de Ouro">
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <h1>Transforme sua Cozinha em uma Fonte de Renda no Natal</h1>
-      <p class="subtitle">Aprenda as receitas mais desejadas do ano e comece a vender panetones, chocotones e mais com um simples passo a passo.</p>
-      <a href="#comprar" class="btn btn-primary">Compre Agora por R$16,90</a>
-      <p class="price-old">De R$47,00 por apenas R$16,90</p>
-    </div>
-  </section>
-
-  <!-- O que você vai aprender -->
-  <section id="o-que-voce-vai-aprender" class="section">
-    <div class="container">
-      <h2>O Que Você Vai Aprender</h2>
-      <ul>
-        <li>Receitas prontas para produção</li>
-        <li>Técnicas de venda para maximizar lucros</li>
-        <li>Estratégias de divulgação no WhatsApp e Instagram</li>
-        <li>Como organizar sua produção para maximizar o lucro</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Oferta Especial de Natal -->
-  <section id="oferta" class="section special-offer">
-    <div class="container">
-      <h2>Oferta Especial de Natal - Só Hoje!</h2>
-      <p class="offer-text">Não perca essa chance de garantir seu acesso imediato às receitas e começar a lucrar já neste Natal!</p>
-      <a href="#comprar" class="btn btn-primary">Quero Garantir Agora</a>
-      <p class="price">R$16,90 à vista ou em até 6x de R$X,XX</p>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="section">
-    <div class="container">
-      <h2>O Que Dizem Nossos Alunos</h2>
-      <div class="testimonials">
-        <div class="testimonial">
-          <p>"Eu nunca imaginei que venderia tanto! As receitas são fáceis e o retorno foi incrível."</p>
-          <span>- João S.</span>
+    <!-- HERO / ACIMA DA DOBRA -->
+    <section class="hero" aria-label="hero">
+      <div class="hero-left">
+        <div class="kicker">Oferta especial — Black Friday estendida</div>
+        <h1>Aprenda 50 Receitas Rápidas e Lucrativas Para Ganhar Dinheiro no Natal Ainda Hoje</h1>
+        <p class="lead">Receitas fáceis, baratas, testadas e prontas para você vender no Natal — mesmo sem experiência e começando do zero.</p>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+          <a class="btn" href="#checkout" id="cta-top">QUERO COMEÇAR HOJE</a>
+          <span class="price">Apenas R$ 14,90</span>
         </div>
-        <div class="testimonial">
-          <p>"Consegui organizar minha produção e vender panetones para várias pessoas do meu bairro. Amei!"</p>
-          <span>- Ana P.</span>
+        <p class="small" style="margin-top:10px">Garantia de 7 dias — risco zero.</p>
+      </div>
+      <div class="hero-right">
+        <!-- substitua por sua imagem em webp otimizada -->
+        <img src="hero.webp" alt="50 Receitas de Ouro - renda extra no natal" loading="lazy">
+      </div>
+    </section>
+
+    <!-- O QUE O CLIENTE RECEBE -->
+    <section class="card" aria-label="o que você recebe">
+      <h2 style="margin:0 0 8px">O que você vai receber</h2>
+      <div class="grid">
+        <div class="bullets">
+          <div class="bullet"><div class="dot"></div><div>50 receitas natalinas fáceis, baratas e prontas</div></div>
+          <div class="bullet"><div class="dot"></div><div>Lista de ingredientes econômicos e modo de preparo simplificado</div></div>
+          <div class="bullet"><div class="dot"></div><div>Sugestões de preço e estratégias de venda rápidas</div></div>
+          <div class="bullet"><div class="dot"></div><div>Ideias de embalagens e mensagens prontas para vender</div></div>
+          <div class="bullet"><div class="dot"></div><div>Bônus: mini-guia de combos e planilha simples de lucro</div></div>
         </div>
       </div>
-    </div>
-  </section>
+      <div style="margin-top:12px">
+        <a class="btn" href="#checkout" id="cta-middle">QUERO AS 50 RECEITAS AGORA</a>
+      </div>
+    </section>
 
-  <!-- Garantia -->
-  <section id="garantia" class="section">
-    <div class="container">
-      <h2>Garantia de Satisfação</h2>
-      <p>Se você não ficar satisfeito com o curso, garantimos reembolso completo dentro de 7 dias. Sem perguntas.</p>
-    </div>
-  </section>
+    <!-- PROVA SOCIAL -->
+    <section class="card" aria-label="depoimentos">
+      <h3 style="margin:0 0 8px">Pessoas comuns já estão usando essas receitas</h3>
+      <div class="testimonials">
+        <div class="test"><img src="depo1.webp" alt="Depoimento 1" style="width:100%;border-radius:8px" /></div>
+        <div class="test"><img src="depo2.webp" alt="Depoimento 2" style="width:100%;border-radius:8px" /></div>
+        <div class="test"><img src="depo3.webp" alt="Depoimento 3" style="width:100%;border-radius:8px" /></div>
+      </div>
+    </section>
 
-  <!-- Call to Action Final -->
-  <section id="comprar" class="cta">
-    <div class="container">
-      <h2>Aproveite Agora a Oferta de Natal</h2>
-      <a href="https://pay.kiwify.com.br/XYXtV6d" class="btn btn-primary">Comprar Agora por R$16,90</a>
-    </div>
-  </section>
+    <!-- MODULOS E BONUS -->
+    <section class="card" aria-label="modulos" id="modulos">
+      <h3 style="margin:0 0 12px">Conteúdo completo do produto</h3>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Receitas de Ouro. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+      <!-- Carrossel super leve -->
+      <div class="carousel" style="overflow:hidden;position:relative;width:100%">
+        <div class="carousel-track" style="display:flex;transition:transform .35s ease;gap:12px">
 
+          <!-- MÓDULO 1 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Módulo 1 — Primeiros Passos</h4>
+            <p class="small">Como começar do zero, organizar sua produção e se preparar para vender no Natal.</p>
+          </div>
+
+          <!-- MÓDULO 2 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Módulo 2 — Receitas Básicas Para Lucro Alto</h4>
+            <p class="small">Receitinhas rápidas, econômicas e com margem alta para começar lucrando ainda hoje.</p>
+          </div>
+
+          <!-- MÓDULO 3 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Módulo 3 — Divulgação de Conteúdo</h4>
+            <p class="small">Aprenda como divulgar sem aparecer e atrair clientes usando estratégias simples.</p>
+          </div>
+
+          <!-- MÓDULO 4 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Módulo 4 — Comunicação de Vendas</h4>
+            <p class="small">Textos prontos e técnicas rápidas de persuasão para vender mais no final do ano.</p>
+          </div>
+
+          <!-- MÓDULO 5 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Módulo 5 — Estratégias de Pós-venda</h4>
+            <p class="small">Como fidelizar clientes e transformar uma compra em clientes recorrentes.</p>
+          </div>
+
+          <!-- MÓDULO 6 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Módulo 6 — 50 Receitas</h4>
+            <p class="small">O coração do produto: 50 receitas práticas, deliciosas e perfeitas para vender no Natal.</p>
+          </div>
+
+          <!-- BÔNUS 1 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Bônus 1 — Panetones e Chocotones Natalinos</h4>
+            <p class="small">Receitas especiais para lucrar ainda mais com produtos tradicionais de Natal.</p>
+          </div>
+
+          <!-- BÔNUS 2 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Bônus 2 — Biscoitos Natalinos</h4>
+            <p class="small">Modelos fáceis, baratos e extremamente lucrativos para vender em grande quantidade.</p>
+          </div>
+
+          <!-- BÔNUS 3 -->
+          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
+            <h4>Bônus 3 — Ceia Natalina</h4>
+            <p class="small">Receitas para quem quer vender pratos completos e lucrar muito no Natal.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Botões do carrossel -->
+      <div style="display:flex;justify-content:center;gap:10px;margin-top:12px">
+        <button id="prevBtn" style="padding:8px 14px;border-radius:8px;background:var(--accent);border:0;font-weight:700">◀</button>
+        <button id="nextBtn" style="padding:8px 14px;border-radius:8px;background:var(--accent);border:0;font-weight:700">▶</button>
+      </div>
+    </section>
+
+    <script>
+      // Carrossel ultra leve
+      (function(){
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.slide');
+        const prev = document.getElementById('prevBtn');
+        const next = document.getElementById('nextBtn');
+        let index = 0;
+
+        function update(){
+          const width = slides[0].offsetWidth + 12;
+          track.style.transform = `translateX(-${index * width}px)`;
+        }
+
+        next.onclick = () => {
+          if(index < slides.length - 1) index++;
+          update();
+        };
+
+        prev.onclick = () => {
+          if(index > 0) index--;
+          update();
+        };
+
+        window.addEventListener('resize', update);
+      })();
+    </script>
+
+    <!-- DOR --> --> -> SOLUCAO -->
+    <section class="card" aria-label="dor e solução">
+      <h3 style="margin:0 0 8px">Não sabe o que vender no Natal? Isso resolve.</h3>
+      <p class="small">Se você tem pouco tempo, medo de não vender ou não sabe como precificar, o <strong>50 Receitas de Ouro</strong> te entrega um passo a passo direto para começar a vender hoje mesmo.</p>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="card offer" aria-label="oferta" id="checkout">
+      <h3 style="margin:0">Oferta Especial de Natal</h3>
+      <div class="big-price">Hoje por apenas <strong>R$ 14,90</strong></div>
+      <p class="small">Acesso imediato — material digital. Garantia de 7 dias.</p>
+      <div class="cta-wrap">
+        <!-- Substitua o link abaixo pelo link real do checkout da Kiwify/Plataforma -->
+        <a class="btn" href="CHECKOUT_LINK_AQUI" id="cta-buy">SIM, EU QUERO GANHAR DINHEIRO NO NATAL</a>
+      </div>
+      <p style="margin-top:8px;font-size:13px;color:var(--muted)">Ao clicar em comprar você será levado ao checkout seguro para finalizar a compra.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card faq" aria-label="faq">
+      <h4 style="margin:0 0 8px">Perguntas rápidas</h4>
+      <div>
+        <strong>Como recebo o material?</strong>
+        <div class="small">Imediatamente após o pagamento, direto no seu e-mail.</div>
+      </div>
+      <div style="margin-top:8px">
+        <strong>Serve pra iniciantes?</strong>
+        <div class="small">Sim. As receitas são simples e explicadas passo a passo.</div>
+      </div>
+      <div style="margin-top:8px">
+        <strong>Preciso de equipamentos profissionais?</strong>
+        <div class="small">Não. Dá pra fazer na cozinha de casa.</div>
+      </div>
+    </section>
+
+    <footer style="margin-top:18px;text-align:center;color:var(--muted);font-size:13px">© 2025 — 50 Receitas de Ouro</footer>
+
+  </main>
+
+  <script>
+    // Script mínimo: liga os CTAs ao link final. Substitua CHECKOUT_LINK_AQUI pelo link do checkout.
+    (function(){
+      var checkout = document.querySelector('#cta-buy');
+      var ctaTop = document.querySelector('#cta-top');
+      var ctaMiddle = document.querySelector('#cta-middle');
+      var finalHref = checkout ? checkout.getAttribute('href') : 'CHECKOUT_LINK_AQUI';
+
+      function goToCheckout(e){
+        e && e.preventDefault();
+        if(finalHref && finalHref.indexOf('#')!==0){
+          window.location.href = finalHref;
+        } else {
+          // se não estiver configurado, rola até a seção de oferta
+          document.getElementById('checkout').scrollIntoView({behavior:'smooth',block:'center'});
+        }
+      }
+      if(ctaTop) ctaTop.addEventListener('click', goToCheckout);
+      if(ctaMiddle) ctaMiddle.addEventListener('click', goToCheckout);
+      if(checkout) checkout.addEventListener('click', goToCheckout);
+
+    })();
+  </script>
 </body>
 </html>
