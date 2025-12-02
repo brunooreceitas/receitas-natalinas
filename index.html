@@ -111,105 +111,58 @@
       </div>
     </section>
 
-    <!-- MODULOS E BONUS -->
-    <section class="card" aria-label="modulos" id="modulos">
-      <h3 style="margin:0 0 12px">Conteúdo completo do produto</h3>
+   <!-- MODULOS E BONUS CARROSSEL -->
+<section class="card" aria-label="modulos" id="modulos">
+  <h3 style="margin:0 0 12px">Conteúdo completo do produto</h3>
+  <div class="carousel">
+    <div class="carousel-track">
 
-      <!-- Carrossel super leve -->
-      <div class="carousel" style="overflow:hidden;position:relative;width:100%">
-        <div class="carousel-track" style="display:flex;transition:transform .35s ease;gap:12px">
+      <!-- MÓDULOS -->
+      <div class="slide"><h4>Módulo 1 — Primeiros Passos</h4><p class="small">Como começar do zero, organizar sua produção e se preparar para vender no Natal.</p></div>
+      <div class="slide"><h4>Módulo 2 — Receitas Básicas Para Lucro Alto</h4><p class="small">Receitinhas rápidas, econômicas e com margem alta para começar lucrando ainda hoje.</p></div>
+      <div class="slide"><h4>Módulo 3 — Divulgação de Conteúdo</h4><p class="small">Aprenda como divulgar sem aparecer e atrair clientes usando estratégias simples.</p></div>
+      <div class="slide"><h4>Módulo 4 — Comunicação de Vendas</h4><p class="small">Textos prontos e técnicas rápidas de persuasão para vender mais no final do ano.</p></div>
+      <div class="slide"><h4>Módulo 5 — Estratégias de Pós-venda</h4><p class="small">Como fidelizar clientes e transformar uma compra em clientes recorrentes.</p></div>
+      <div class="slide"><h4>Módulo 6 — 50 Receitas</h4><p class="small">O coração do produto: 50 receitas práticas, deliciosas e perfeitas para vender no Natal.</p></div>
 
-          <!-- MÓDULO 1 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Módulo 1 — Primeiros Passos</h4>
-            <p class="small">Como começar do zero, organizar sua produção e se preparar para vender no Natal.</p>
-          </div>
+      <!-- BÔNUS -->
+      <div class="slide"><h4>Bônus 1 — Panetones e Chocotones Natalinos</h4><p class="small">Receitas especiais para lucrar ainda mais com produtos tradicionais de Natal.</p></div>
+      <div class="slide"><h4>Bônus 2 — Biscoitos Natalinos</h4><p class="small">Modelos fáceis, baratos e extremamente lucrativos para vender em grande quantidade.</p></div>
+      <div class="slide"><h4>Bônus 3 — Ceia Natalina</h4><p class="small">Receitas para quem quer vender pratos completos e lucrar muito no Natal.</p></div>
 
-          <!-- MÓDULO 2 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Módulo 2 — Receitas Básicas Para Lucro Alto</h4>
-            <p class="small">Receitinhas rápidas, econômicas e com margem alta para começar lucrando ainda hoje.</p>
-          </div>
+      <!-- Duplicamos alguns slides para loop infinito -->
+      <div class="slide"><h4>Módulo 1 — Primeiros Passos</h4><p class="small">Como começar do zero, organizar sua produção e se preparar para vender no Natal.</p></div>
+      <div class="slide"><h4>Módulo 2 — Receitas Básicas Para Lucro Alto</h4><p class="small">Receitinhas rápidas, econômicas e com margem alta para começar lucrando ainda hoje.</p></div>
+      <div class="slide"><h4>Módulo 3 — Divulgação de Conteúdo</h4><p class="small">Aprenda como divulgar sem aparecer e atrair clientes usando estratégias simples.</p></div>
 
-          <!-- MÓDULO 3 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Módulo 3 — Divulgação de Conteúdo</h4>
-            <p class="small">Aprenda como divulgar sem aparecer e atrair clientes usando estratégias simples.</p>
-          </div>
+    </div>
+  </div>
+</section>
 
-          <!-- MÓDULO 4 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Módulo 4 — Comunicação de Vendas</h4>
-            <p class="small">Textos prontos e técnicas rápidas de persuasão para vender mais no final do ano.</p>
-          </div>
+<script>
+  // Carrossel automático, contínuo, ultra leve
+  (function(){
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.slide');
+    const gap = 12;
+    let position = 0;
 
-          <!-- MÓDULO 5 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Módulo 5 — Estratégias de Pós-venda</h4>
-            <p class="small">Como fidelizar clientes e transformar uma compra em clientes recorrentes.</p>
-          </div>
+    function move() {
+      const width = slides[0].offsetWidth + gap;
+      position += 1; // velocidade do carrossel (quanto maior, mais rápido)
+      if(position >= width * (slides.length / 2)) position = 0; // loop infinito
+      track.style.transform = `translateX(-${position}px)`;
+      requestAnimationFrame(move);
+    }
 
-          <!-- MÓDULO 6 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Módulo 6 — 50 Receitas</h4>
-            <p class="small">O coração do produto: 50 receitas práticas, deliciosas e perfeitas para vender no Natal.</p>
-          </div>
+    move();
 
-          <!-- BÔNUS 1 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Bônus 1 — Panetones e Chocotones Natalinos</h4>
-            <p class="small">Receitas especiais para lucrar ainda mais com produtos tradicionais de Natal.</p>
-          </div>
+    // Pausa ao tocar no mobile (opcional)
+    track.addEventListener('touchstart', () => track.style.animationPlayState = "paused");
+    track.addEventListener('touchend', () => track.style.animationPlayState = "running");
+  })();
+</script>
 
-          <!-- BÔNUS 2 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Bônus 2 — Biscoitos Natalinos</h4>
-            <p class="small">Modelos fáceis, baratos e extremamente lucrativos para vender em grande quantidade.</p>
-          </div>
-
-          <!-- BÔNUS 3 -->
-          <div class="slide" style="min-width:85%;background:rgba(0,0,0,0.18);padding:16px;border-radius:12px">
-            <h4>Bônus 3 — Ceia Natalina</h4>
-            <p class="small">Receitas para quem quer vender pratos completos e lucrar muito no Natal.</p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Botões do carrossel -->
-      <div style="display:flex;justify-content:center;gap:10px;margin-top:12px">
-        <button id="prevBtn" style="padding:8px 14px;border-radius:8px;background:var(--accent);border:0;font-weight:700">◀</button>
-        <button id="nextBtn" style="padding:8px 14px;border-radius:8px;background:var(--accent);border:0;font-weight:700">▶</button>
-      </div>
-    </section>
-
-    <script>
-      // Carrossel ultra leve
-      (function(){
-        const track = document.querySelector('.carousel-track');
-        const slides = document.querySelectorAll('.slide');
-        const prev = document.getElementById('prevBtn');
-        const next = document.getElementById('nextBtn');
-        let index = 0;
-
-        function update(){
-          const width = slides[0].offsetWidth + 12;
-          track.style.transform = `translateX(-${index * width}px)`;
-        }
-
-        next.onclick = () => {
-          if(index < slides.length - 1) index++;
-          update();
-        };
-
-        prev.onclick = () => {
-          if(index > 0) index--;
-          update();
-        };
-
-        window.addEventListener('resize', update);
-      })();
-    </script>
 
     <!-- DOR --> --> -> SOLUCAO -->
     <section class="card" aria-label="dor e solução">
