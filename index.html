@@ -1,4 +1,3 @@
-Chat, quero que você ajuste a estrutura desse HTML aqui.
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +7,7 @@ Chat, quero que você ajuste a estrutura desse HTML aqui.
   <meta name="description" content="50 Receitas de Ouro — receitinhas fáceis, baratas e prontas para vender no Natal. Acesso imediato." />
   <style>
     :root{
-      --bg: linear-gradient(180deg, #1a1a1a, #0b0b0b); /* gradiente suave de fundo */
+      --bg: linear-gradient(180deg, #ff4d00, #b30000); /* gradiente vermelho natalino */
       --card:#0f0f0f;
       --accent:#d4af37;
       --muted:#bdbdbd;
@@ -70,6 +69,21 @@ Chat, quero que você ajuste a estrutura desse HTML aqui.
 
     /* footer / faq */
     .faq{margin-top:10px;font-size:14px;color:var(--muted)}
+    .faq-item{margin-top:8px}
+    .faq-question{
+      background:none;
+      border:none;
+      color: var(--white);
+      font-size: 15px;
+      cursor:pointer;
+      text-align:left;
+      font-weight: bold;
+      padding: 8px 0;
+    }
+    .faq-answer{
+      display:none;
+      margin-top:6px;
+    }
 
     /* CARROSSEL MÓDULOS */
     .carousel { overflow: hidden; position: relative; width: 100%; }
@@ -151,9 +165,6 @@ Chat, quero que você ajuste a estrutura desse HTML aqui.
           <div class="slide"><img src="assets/images/bonus1.webp" alt="Bônus 1 — Panetones e Chocotones Natalinos"></div>
           <div class="slide"><img src="assets/images/bonus2.webp" alt="Bônus 2 — Biscoitos Natalinos"></div>
           <div class="slide"><img src="assets/images/bonus3.webp" alt="Bônus 3 — Ceia Natalina"></div>
-          <div class="slide"><img src="assets/images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
-          <div class="slide"><img src="assets/images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
-          <div class="slide"><img src="assets/images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
         </div>
       </div>
     </section>
@@ -189,17 +200,17 @@ Chat, quero que você ajuste a estrutura desse HTML aqui.
     <!-- FAQ -->
     <section class="card faq" aria-label="faq">
       <h4 style="margin:0 0 8px">Perguntas rápidas</h4>
-      <div>
-        <strong>Como recebo o material?</strong>
-        <div class="small">Imediatamente após o pagamento, direto no seu e-mail.</div>
+      <div class="faq-item">
+        <button class="faq-question">Como recebo o material?</button>
+        <div class="faq-answer small">Imediatamente após o pagamento, direto no seu e-mail.</div>
       </div>
-      <div style="margin-top:8px">
-        <strong>Serve pra iniciantes?</strong>
-        <div class="small">Sim. As receitas são simples e explicadas passo a passo.</div>
+      <div class="faq-item">
+        <button class="faq-question">Serve pra iniciantes?</button>
+        <div class="faq-answer small">Sim. As receitas são simples e explicadas passo a passo.</div>
       </div>
-      <div style="margin-top:8px">
-        <strong>Preciso de equipamentos profissionais?</strong>
-        <div class="small">Não. Dá pra fazer na cozinha de casa.</div>
+      <div class="faq-item">
+        <button class="faq-question">Preciso de equipamentos profissionais?</button>
+        <div class="faq-answer small">Não. Dá pra fazer na cozinha de casa.</div>
       </div>
     </section>
 
