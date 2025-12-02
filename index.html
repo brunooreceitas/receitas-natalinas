@@ -6,22 +6,20 @@
   <title>50 Receitas de Ouro – Ganhe dinheiro no Natal</title>
   <style>
     :root {
-  --accent: #f7c140;
-  --dark: #0d0d0d;
-  --light: #ffffff;
-  --muted: #d2d2d2;
-  --bg: #e63946;  /* Tom de vermelho vibrante para o fundo */
-}
-
-body {
-  margin: 0;
-  background: var(--bg);  /* Usando o novo fundo vermelho */
-  color: var(--light);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
+      --accent: #f7c140;
+      --dark: #0d0d0d;
+      --light: #ffffff;
+      --muted: #d2d2d2;
+      --bg: #e63946;  /* Tom de vermelho vibrante para o fundo */
+    }
+    body {
+      margin: 0;
+      background: var(--bg);  /* Usando o novo fundo vermelho */
+      color: var(--light);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
     a { text-decoration: none; color: inherit; }
 
     /* HEADER */
@@ -34,6 +32,28 @@ body {
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
+    /* FESTÃO NATALINO ANIMADO */
+    .festao {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background: url('assets/images/festao-natalino.png') no-repeat center center;
+      background-size: cover;
+      height: 100px;
+      animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
     /* HERO */
     .hero {
       padding: 28px 18px;
@@ -43,7 +63,7 @@ body {
     }
     .hero-right {
       width: 100%;
-      max-width:850px;
+      max-width: 850px;
       margin: 0 auto 16px;
     }
     .hero-right img {
@@ -71,19 +91,6 @@ body {
       border-radius: 8px;
       display: inline-block;
       margin-top: 6px;
-    }
-
-    /* MICRO-SELOS */
-    .micro-selos {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-    .micro-selos img {
-      width: 82px;
-      height: auto;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
     }
 
     /* SEÇÃO PROVAS */
@@ -245,6 +252,9 @@ body {
   </style>
 </head>
 <body>
+
+<!-- Faixa de Festão Natalino -->
+<div class="festao"></div>
 
 <header>🔥 Oferta limitada — Black Friday estendida 🔥</header>
 
