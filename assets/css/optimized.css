@@ -1,0 +1,99 @@
+/* Optimized CSS - Mobile-first, minimal and conversion-focused */
+:root{
+  --bg:#fff9f5;
+  --brown:#2d1a06;
+  --accent:#fc7019;
+  --green:#03b367;
+  --gold:#d4af37;
+  --muted:#6b6b6b;
+  --white:#ffffff;
+  --max-width:1100px;
+  --radius:14px;
+  --ff-sans: 'Montserrat', system-ui, Arial, sans-serif;
+  --ff-serif: 'Marcellus', serif;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--ff-sans);-webkit-font-smoothing:antialiased;background:var(--bg);color:#222}
+img{max-width:100%;display:block}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+
+/* Global helpers */
+.row{display:flex;gap:16px;align-items:center}
+.center{text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:none;cursor:pointer}
+.btn-primary{background:var(--green);color:#fff}
+.btn-outline{background:transparent;color:var(--green);border:2px solid var(--green)}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+.h-1{font-size:28px}
+
+/* HERO */
+.hero{padding:28px 0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+.hero-text h1{font-family:var(--ff-serif);font-size:30px;margin:0;color:var(--brown);line-height:1.05}
+.sub{color:#3b3b3b;margin:8px 0 12px}
+.bullets{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 14px}
+.bullets li{background:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.06);font-weight:600}
+.garantia{font-size:13px;color:var(--muted);margin-top:10px}
+.hero-media{display:flex;justify-content:center}
+.hero-img{border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,0.12)}
+
+/* PROVAS */
+.provas{padding:10px 0}
+.provas-grid{display:flex;gap:12px;justify-content:center;align-items:center}
+.provas-grid img{width:110px;height:84px;object-fit:cover;border-radius:8px;border:2px solid rgba(0,0,0,0.04)}
+
+/* RECEBE */
+.recebe{padding:18px 0}
+.recebe-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.recebe .item{background:#fff;padding:14px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.06);text-align:left}
+.recebe .item h3{margin:0 0 6px;font-size:16px;color:var(--brown)}
+
+/* MÓDULOS */
+.modulos{padding:18px 0}
+.modulos .modulos-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.mod{background:#fff;padding:12px;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,0.06)}
+.mod h4{margin:0 0 6px;font-size:15px;color:var(--brown)}
+
+/* OFERTA */
+.oferta{padding:16px 0}
+.oferta-box{display:grid;grid-template-columns:1fr;gap:12px;align-items:center}
+.box-left img{border-radius:10px}
+.box-right h2{margin:0 0 10px;font-size:20px}
+.box-right .old{text-decoration:line-through;color:var(--muted);font-weight:700;margin-right:8px}
+.box-right .new{color:var(--green);font-weight:900;font-size:22px}
+.obs{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* FAQ */
+.faq{padding:14px 0}
+.faq details{background:#fff;padding:12px;border-radius:10px;margin-bottom:8px;box-shadow:0 10px 24px rgba(0,0,0,0.04)}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:10px 0 0;color:#333}
+
+/* FOOTER */
+.footer{padding:22px 0;text-align:center;color:var(--muted);font-size:13px}
+
+/* Desktop layout adjustments */
+@media(min-width:900px){
+  .hero-grid{grid-template-columns:1fr 420px;align-items:center}
+  .recebe-grid{grid-template-columns:repeat(3,1fr)}
+  .modulos .modulos-grid{grid-template-columns:repeat(3,1fr)}
+  .oferta-box{grid-template-columns:420px 1fr}
+  .provas-grid img{width:140px;height:100px}
+}
+
+/* Sticky mobile CTA */
+.sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:120;gap:12px;background:linear-gradient(90deg,var(--green),#06a35a);padding:10px;border-radius:12px;align-items:center;justify-content:space-between;box-shadow:0 18px 50px rgba(0,0,0,0.18)}
+.sticky-cta .price{font-weight:900;color:#fff}
+.sticky-cta .cta{background:transparent;border:0;color:#fff;font-weight:800}
+
+/* Accessibility */
+a:focus,button:focus{outline:3px solid rgba(212,175,55,0.18);outline-offset:2px}
+
+/* Tiny helpers for spacing */
+.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mb-12{margin-bottom:12px}
+
+/* Clean up unnecessary heavy styles from original */
+/* No decorative seals, no heavy gradients, no large shadows */
