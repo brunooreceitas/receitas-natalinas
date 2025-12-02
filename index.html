@@ -53,6 +53,12 @@
     /* footer / faq */
     .faq{margin-top:10px;font-size:14px;color:var(--muted)}
 
+    /* CARROSSEL MÓDULOS */
+    .carousel { overflow: hidden; position: relative; width: 100%; }
+    .carousel-track { display: flex; gap: 12px; transition: transform 0.3s linear; }
+    .slide { min-width: 85%; flex-shrink: 0; border-radius: 12px; overflow: hidden; }
+    .slide img { width: 100%; height: auto; max-height: 220px; object-fit: cover; display: block; border-radius: 12px; }
+
     /* responsividade */
     @media(min-width:820px){
       h1{font-size:32px}
@@ -60,6 +66,9 @@
       .hero-right{width:220px}
       .testimonials{grid-template-columns:repeat(3,1fr)}
       .container{padding:32px}
+    }
+    @media(max-width:820px){
+      .testimonials { display: flex; flex-direction: column; gap: 12px; }
     }
   </style>
 </head>
@@ -79,7 +88,6 @@
         <p class="small" style="margin-top:10px">Garantia de 7 dias — risco zero.</p>
       </div>
       <div class="hero-right">
-        <!-- substitua por sua imagem em webp otimizada -->
         <img src="assets/images/hero.webp" alt="50 Receitas de Ouro - renda extra no natal" loading="lazy">
       </div>
     </section>
@@ -105,90 +113,33 @@
     <section class="card" aria-label="depoimentos">
       <h3 style="margin:0 0 8px">Pessoas comuns já estão usando essas receitas</h3>
       <div class="testimonials">
-<img src="assets/images/depo1.webp" alt="Depoimento 1" style="width:100%;border-radius:8px" />
-<img src="assets/images/depo2.webp" alt="Depoimento 2" style="width:100%;border-radius:8px" />
-<img src="assets/images/depo3.webp" alt="Depoimento 3" style="width:100%;border-radius:8px" />
+        <img src="assets/images/depo1.webp" alt="Depoimento 1" style="width:100%;border-radius:8px" />
+        <img src="assets/images/depo2.webp" alt="Depoimento 2" style="width:100%;border-radius:8px" />
+        <img src="assets/images/depo3.webp" alt="Depoimento 3" style="width:100%;border-radius:8px" />
       </div>
     </section>
 
-<!-- MODULOS E BONUS CARROSSEL -->
-<section class="card" aria-label="modulos" id="modulos">
-  <h3 style="margin:0 0 12px">Conteúdo completo do produto</h3>
-  <div class="carousel">
-    <div class="carousel-track">
-
-      <!-- MÓDULOS COM IMAGENS -->
-      <div class="slide"><img src="assets/images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
-      <div class="slide"><img src="assets/images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
-      <div class="slide"><img src="assets/images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
-      <div class="slide"><img src="assets/images/modulo4.webp" alt="Módulo 4 — Comunicação de Vendas"></div>
-      <div class="slide"><img src="assets/images/modulo5.webp" alt="Módulo 5 — Estratégias de Pós-venda"></div>
-      <div class="slide"><img src="assets/images/modulo6.webp" alt="Módulo 6 — 50 Receitas"></div>
-
-      <!-- BÔNUS COM IMAGENS -->
-      <div class="slide"><img src="assets/images/bonus1.webp" alt="Bônus 1 — Panetones e Chocotones Natalinos"></div>
-      <div class="slide"><img src="assets/images/bonus2.webp" alt="Bônus 2 — Biscoitos Natalinos"></div>
-      <div class="slide"><img src="assets/images/bonus3.webp" alt="Bônus 3 — Ceia Natalina"></div>
-
-      <!-- DUPLICAMOS PARA LOOP INFINITO -->
-      <div class="slide"><img src="assets/images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
-      <div class="slide"><img src="assets/images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
-      <div class="slide"><img src="assets/images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-.carousel {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 12px;
-  transition: transform 0.3s linear;
-}
-
-.slide {
-  min-width: 85%;
-  flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-</style>
-
-<script>
-(function(){
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.slide');
-  const gap = 12;
-  let position = 0;
-
-  function move() {
-    const width = slides[0].offsetWidth + gap;
-    position += 1; // velocidade do carrossel
-    if(position >= width * (slides.length / 2)) position = 0; // loop infinito
-    track.style.transform = `translateX(-${position}px)`;
-    requestAnimationFrame(move);
-  }
-
-  move();
-
-  // Pausa ao tocar no mobile (opcional)
-  track.addEventListener('touchstart', () => track.style.animationPlayState = "paused");
-  track.addEventListener('touchend', () => track.style.animationPlayState = "running");
-})();
-</script>
+    <!-- MODULOS E BONUS CARROSSEL -->
+    <section class="card" aria-label="modulos" id="modulos">
+      <h3 style="margin:0 0 12px">Conteúdo completo do produto</h3>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="slide"><img src="assets/images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
+          <div class="slide"><img src="assets/images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
+          <div class="slide"><img src="assets/images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
+          <div class="slide"><img src="assets/images/modulo4.webp" alt="Módulo 4 — Comunicação de Vendas"></div>
+          <div class="slide"><img src="assets/images/modulo5.webp" alt="Módulo 5 — Estratégias de Pós-venda"></div>
+          <div class="slide"><img src="assets/images/modulo6.webp" alt="Módulo 6 — 50 Receitas"></div>
+          <div class="slide"><img src="assets/images/bonus1.webp" alt="Bônus 1 — Panetones e Chocotones Natalinos"></div>
+          <div class="slide"><img src="assets/images/bonus2.webp" alt="Bônus 2 — Biscoitos Natalinos"></div>
+          <div class="slide"><img src="assets/images/bonus3.webp" alt="Bônus 3 — Ceia Natalina"></div>
+          <!-- DUPLICAMOS PARA LOOP INFINITO -->
+          <div class="slide"><img src="assets/images/modulo1.webp" alt="Módulo 1 — Primeiros Passos"></div>
+          <div class="slide"><img src="assets/images/modulo2.webp" alt="Módulo 2 — Receitas Básicas Para Lucro Alto"></div>
+          <div class="slide"><img src="assets/images/modulo3.webp" alt="Módulo 3 — Divulgação de Conteúdo"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- DOR -->
     <section class="card" aria-label="dor e solução">
@@ -202,22 +153,21 @@
       <div class="big-price">Hoje por apenas <strong>R$ 16,90</strong></div>
       <p class="small">Acesso imediato — material digital. Garantia de 7 dias.</p>
       <div class="cta-wrap">
-        <!-- Substitua o link abaixo pelo link real do checkout da Kiwify/Plataforma -->
         <a class="btn" href="https://pay.kiwify.com.br/XYXtV6d" id="cta-buy">SIM, EU QUERO GANHAR DINHEIRO NO NATAL</a>
       </div>
       <p style="margin-top:8px;font-size:13px;color:var(--muted)">Ao clicar em comprar você será levado ao checkout seguro para finalizar a compra.</p>
     </section>
 
-<!-- GARANTIA -->
-<section class="card" aria-label="garantia">
-  <div style="display:flex;align-items:center;gap:12px">
-    <img src="assets/images/garantia30.webp" alt="Garantia de 30 dias" style="width:48px;height:48px"/>
-    <div>
-      <h4 style="margin:0 0 4px">Garantia de 30 dias</h4>
-      <p class="small" style="margin:0">Se não estiver satisfeito, devolvemos seu dinheiro. Totalmente sem risco.</p>
-    </div>
-  </div>
-</section>
+    <!-- GARANTIA -->
+    <section class="card" aria-label="garantia">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="assets/images/garantia30.webp" alt="Garantia de 30 dias" style="width:48px;height:48px"/>
+        <div>
+          <h4 style="margin:0 0 4px">Garantia de 30 dias</h4>
+          <p class="small" style="margin:0">Se não estiver satisfeito, devolvemos seu dinheiro. Totalmente sem risco.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ -->
     <section class="card faq" aria-label="faq">
@@ -241,7 +191,7 @@
   </main>
 
   <script>
-    // Script mínimo: liga os CTAs ao link final. Substitua CHECKOUT_LINK_AQUI pelo link do checkout.
+    // Script mínimo: liga os CTAs ao link final
     (function(){
       var checkout = document.querySelector('#cta-buy');
       var ctaTop = document.querySelector('#cta-top');
@@ -253,14 +203,30 @@
         if(finalHref && finalHref.indexOf('#')!==0){
           window.location.href = finalHref;
         } else {
-          // se não estiver configurado, rola até a seção de oferta
           document.getElementById('checkout').scrollIntoView({behavior:'smooth',block:'center'});
         }
       }
       if(ctaTop) ctaTop.addEventListener('click', goToCheckout);
       if(ctaMiddle) ctaMiddle.addEventListener('click', goToCheckout);
       if(checkout) checkout.addEventListener('click', goToCheckout);
+    })();
 
+    // Carrossel módulos auto scroll
+    (function(){
+      const track = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.slide');
+      const gap = 12;
+      let position = 0;
+
+      function move() {
+        const slideWidth = slides[0].offsetWidth + gap;
+        position += 0.5; // velocidade suave
+        if(position >= slideWidth * (slides.length / 2)) position = 0; // loop infinito
+        track.style.transform = `translateX(-${position}px)`;
+        requestAnimationFrame(move);
+      }
+
+      move();
     })();
   </script>
 </body>
