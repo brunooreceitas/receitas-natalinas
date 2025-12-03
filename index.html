@@ -13,15 +13,14 @@
       --bg: #d32f2f;  /* Tom de vermelho mais suave */
     }
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--light);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.5;
-      overflow-x: hidden;
-      position: relative; /* Garante que a neve fique abaixo do conteúdo */
-    }
+body {
+  margin: 0;
+  background: var(--bg);  /* Usando o novo fundo vermelho */
+  color: var(--light);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
 
     a { text-decoration: none; color: inherit; }
 
@@ -212,6 +211,36 @@
       .depoimentos-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* Correções das imagens */
+    /* Imagem Hero */
+    .hero-right img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Imagem de Oferta */
+    .oferta-img img {
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Imagem dos Selos */
+    .selo-group img {
+      width: 80px;
+      height: auto;
+      margin: 0 10px;
     }
 
     /* Animação de Neve */
