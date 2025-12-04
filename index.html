@@ -36,6 +36,9 @@
       font-weight: 600;
       font-size: 15px;
       border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente no header */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* HERO */
@@ -61,6 +64,9 @@
       font-size: 30px;
       font-weight: 800;
       margin: 10px 0 8px;
+      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente nas letras do título */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .hero p.lead {
       color: var(--muted);
@@ -75,7 +81,10 @@
       border-radius: 8px;
       display: inline-block;
       margin-top: 6px;
+      background: linear-gradient(90deg, #d1a23d, #f5e6b8, #ffffff); /* Gradiente no botão */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
+    .btn:hover { opacity: 0.85; }
 
     /* Bandeiras de Cartões */
     .card-flags {
@@ -99,6 +108,9 @@
       text-align:center;
       font-size: 26px;
       margin-bottom: 26px;
+      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente nos títulos da seção */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .provas-grid {
       display: grid;
@@ -121,7 +133,12 @@
       margin: 0 auto;
       text-align: center;
     }
-    .beneficios h2 { font-size: 26px; }
+    .beneficios h2 { 
+      font-size: 26px;
+      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente nos títulos da seção */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     .beneficios-list {
       margin-top: 22px;
       display: grid;
@@ -143,7 +160,7 @@
 
     .bonus-wrapper h2 {
       font-size: 30px;
-      background: linear-gradient(45deg, #f7c140, #ff6d00); 
+      background: linear-gradient(45deg, #f7c140, #ff6d00); /* Gradiente no título */
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 20px;
