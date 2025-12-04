@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>50 Receitas de Ouro – Ganhe dinheiro no Natal</title>
+  
+  <!-- TIPOGRAFIA PREMIUM -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --accent: #f7c140; /* Amarelo vibrante para destaques */
@@ -13,14 +17,14 @@
       --bg: #d32f2f;  /* Tom de vermelho mais suave */
     }
 
-body {
-  margin: 0;
-  background: var(--bg);  /* Usando o novo fundo vermelho */
-  color: var(--light);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      background: var(--bg); /* Fundo vermelho */
+      color: var(--light);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
 
     a { text-decoration: none; color: inherit; }
 
@@ -64,7 +68,7 @@ body {
       margin-bottom: 18px;
     }
     .btn {
-      background: var(--accent);
+      background: linear-gradient(to right, #f7c140, #ff6d00); /* Gradiente dourado */
       padding: 14px 28px;
       color: #000;
       font-weight: 700;
@@ -73,17 +77,16 @@ body {
       margin-top: 6px;
     }
 
-    /* MICRO-SELOS */
-    .micro-selos {
-      margin-top: 30px;
+    /* Bandeiras de Cartões */
+    .card-flags {
       display: flex;
       justify-content: center;
       gap: 10px;
+      margin-top: 10px;
     }
-    .micro-selos img {
-      width: 82px;
+    .card-flags img {
+      width: 40px;
       height: auto;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
     }
 
     /* SEÇÃO PROVAS */
@@ -130,6 +133,46 @@ body {
       padding: 18px;
       border-radius: 10px;
       text-align:left;
+    }
+
+    /* SEÇÃO BÔNUS */
+    .bonus-wrapper {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .bonus-wrapper h2 {
+      font-size: 30px;
+      background: linear-gradient(45deg, #f7c140, #ff6d00); 
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .bonus-card {
+      display: inline-block;
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .bonus-card img {
+      width: 80px;
+      height: auto;
+    }
+
+    .bonus-card h4 {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .bonus-card p {
+      font-size: 14px;
+      color: #ccc;
     }
 
     /* OFERTA */
@@ -180,70 +223,7 @@ body {
       margin-top:40px;
     }
 
-    /* DEPOIMENTOS - layout moderno */
-    .depoimentos {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .depoimentos h2 {
-      font-size: 26px;
-      margin-bottom: 24px;
-      font-weight: 800;
-    }
-    .depoimentos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .dep-item img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-    }
-    @media (max-width: 900px) {
-      .depoimentos-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 600px) {
-      .depoimentos-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Correções das imagens */
-    /* Imagem Hero */
-    .hero-right img {
-      width: 100%;
-      max-width: 850px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Imagem de Oferta */
-    .oferta-img img {
-      width: 80%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Imagem dos Selos */
-    .selo-group img {
-      width: 80px;
-      height: auto;
-      margin: 0 10px;
-    }
-
-    /* Animação de Neve */
+    /* ANIMAÇÃO DE NEVE */
     .snowflake {
       position: absolute;
       background-color: white;
@@ -300,6 +280,11 @@ body {
   <h1>Aprenda 50 Receitas Rápidas e Lucrativas Para o Natal</h1>
   <p class="lead">Receitas testadas, práticas, baratas e prontas para vender e lucrar ainda em dezembro — mesmo começando do zero.</p>
   <a href="https://pay.kiwify.com.br/XYXtV6d" class="btn">Transforme seu Natal em lucro agora!</a>
+
+  <!-- Bandeiras de Cartões -->
+  <div class="card-flags">
+    <img src="assets/images/bandeirascartoes.webp" alt="Bandeiras">  
+  </div>
 </section>
 
 <section class="provas" id="provas">
@@ -320,14 +305,50 @@ body {
     <div class="beneficio"> ✔ Divulgação inteligente para vender mesmo com poucos seguidores</div>
     <div class="beneficio"> ✔ Scripts de conversa prontos para fechar venda</div>
     <div class="beneficio"> ✔ Estratégias de pós-venda para multiplicar o lucro</div>
-    <div class="beneficio"> ✔ Biscoitos natalinos (Bônus)</div>
-    <div class="beneficio"> ✔ Panetones e chocotones gourmet (Bônus)</div>
-    <div class="beneficio"> ✔ Ganaches e cremes profissionais (Bônus)</div>
-    <div class="beneficio"> ✔ Trufas lucrativas (Bônus)</div>
-    <div class="beneficio"> ✔ Ceia natalina completa (Bônus)</div>
   </div>
 </section>
 
+<!-- SEÇÃO BÔNUS -->
+<section class="bonus-wrapper">
+  <h2>🎁 Bônus Exclusivos</h2>
+  <div class="bonus-card">
+    <img src="assets/images/presente-breier.png" class="present-icon" />
+    <div>
+      <h4>Biscoitos Natalinos</h4>
+      <p>Receitas profissionais para vender muito.</p>
+    </div>
+  </div>
+  <div class="bonus-card">
+    <img src="assets/images/presente-breier.png" class="present-icon" />
+    <div>
+      <h4>Panetones e Chocotones Gourmet</h4>
+      <p>Receitas premium para atrair mais compradores.</p>
+    </div>
+  </div>
+  <div class="bonus-card">
+    <img src="assets/images/presente-breier.png" class="present-icon" />
+    <div>
+      <h4>Ganaches e Cremes Profissionais</h4>
+      <p>Versões especiais para encantar seus clientes.</p>
+    </div>
+  </div>
+  <div class="bonus-card">
+    <img src="assets/images/presente-breier.png" class="present-icon" />
+    <div>
+      <h4>Trufas Lucrativas</h4>
+      <p>Baixo custo e alta margem de lucro.</p>
+    </div>
+  </div>
+  <div class="bonus-card">
+    <img src="assets/images/presente-breier.png" class="present-icon" />
+    <div>
+      <h4>Ceia Natalina Completa</h4>
+      <p>O guia completo para um Natal lucrativo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
 <section class="oferta" id="checkout">
   <div class="oferta-wrap">
     <div class="oferta-img">
