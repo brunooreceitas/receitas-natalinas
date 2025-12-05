@@ -1,432 +1,349 @@
-  <!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>50 Receitas de Ouro – Ganhe dinheiro no Natal</title>
-  
-  <!-- TIPOGRAFIA PREMIUM -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>50 Receitas de Ouro — Natal Ultra (Versão Perfeição Total)</title>
+  <meta name="description" content="Landing page natalina premium otimizada para tráfego — velocidade, tracking e conversão." />
 
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- CRITICAL CSS (inline) -->
   <style>
-    :root {
-      --accent: #f7c140; /* Amarelo vibrante para destaques */
-      --dark: #0d0d0d;
-      --light: #f5f5f5; /* Cor de texto suavizada */
-      --muted: #b0b0b0; /* Cor suave para texto secundário */
-      --bg: #d32f2f;  /* Tom de vermelho mais suave */
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg); /* Fundo vermelho */
-      color: var(--light);
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    /* HEADER */
-    header {
-      padding: 14px 22px;
-      background: #0f0f0f;
-      text-align: center;
-      font-weight: 600;
-      font-size: 15px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente no header */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
+    :root{--gold:#f7e29d;--gold2:#fff4c8;--red:#b30000;--green:#0bbf4f;--dark:#070405;--panel:#0f0f0f;--muted:#cfcfcf;--snow:rgba(255,255,255,0.85);--ease:cubic-bezier(.2,.9,.2,1)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:var(--dark);color:#fff;font-family:'Montserrat',sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    header{position:fixed;top:0;left:0;right:0;height:68px;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#a00000,#d40000,#ff3333);color:var(--gold);font-weight:900;font-size:1.02rem;z-index:9999}
+    main{margin-top:84px}
     /* HERO */
-    .hero {
-      padding: 28px 18px;
-      text-align: center;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .hero-right {
-      width: 100%;
-      max-width:850px;
-      margin: 0 auto 16px;
-    }
-    .hero-right img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      display: block;
-    }
-    .hero h1 {
-      font-size: 30px;
-      font-weight: 800;
-      margin: 10px 0 8px;
-      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente nas letras do título */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero p.lead {
-      color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 18px;
-    }
-    .btn {
-      background: linear-gradient(to right, #f7c140, #ff6d00); /* Gradiente dourado */
-      padding: 14px 28px;
-      color: #000;
-      font-weight: 700;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 6px;
-      background: linear-gradient(90deg, #d1a23d, #f5e6b8, #ffffff); /* Gradiente no botão */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .btn:hover { opacity: 0.85; }
+    .hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:80px 18px;background:linear-gradient(180deg,#150004,#3a0006)}
+    .hero .bg{position:absolute;inset:0;background:url('assets/images/imagemdahero.webp') center/cover no-repeat;filter:brightness(.28) saturate(1.2);z-index:1}
+    .hero .lights{position:absolute;inset:0;background:url('assets/images/natal-lights.png') center/cover no-repeat;mix-blend-mode:screen;opacity:.25;z-index:2}
+    .hero .snow-layer{position:absolute;inset:0;pointer-events:none;z-index:40}
+    .hero-inner{position:relative;z-index:50;max-width:980px;padding:40px}
+    .hero h1{font-size:3.2rem;line-height:1.02;font-weight:900;background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:18px;text-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .hero p.lead{color:var(--muted);font-size:1.15rem;margin-bottom:22px}
+    .btn-primary{display:inline-block;padding:14px 34px;border-radius:12px;font-weight:900;background:linear-gradient(90deg,#fff7d1,#ffe6a5);color:#7a0000;box-shadow:0 20px 70px rgba(255,220,110,0.12);text-decoration:none;transition:transform .16s var(--ease)}
+    .btn-primary:hover{transform:translateY(-3px)}
+    .flags img{width:320px;margin-top:22px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.6))}
 
-    /* Bandeiras de Cartões */
-    .card-flags {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .card-flags img {
-      width: 300px; /* Aumentado para melhorar a visibilidade na Hero */
-      height: auto;
-    }
+    /* Sections common */
+    section{padding:72px 20px}
+    .section-title{font-size:2.2rem;font-weight:900;background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;text-align:center}
+    .lead-muted{color:var(--muted);text-align:center;max-width:980px;margin:0 auto 22px}
 
-    /* SEÇÃO PROVAS */
-    .provas {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .provas h2 {
-      text-align:center;
-      font-size: 26px;
-      margin-bottom: 26px;
-      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente nos títulos da seção */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .provas-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 18px;
-    }
-    .provas-grid img {
-      width: 100%; height:auto; border-radius:10px;
-    }
-    @media(max-width:700px){
-      .provas-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    /* Mosaic/proofs */
+    .mosaic{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .mosaic .pw{background:linear-gradient(145deg,#0f0f0f,#060606);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+    .mosaic img{width:100%;height:100%;object-fit:cover;border-radius:10px}
 
-    /* BENEFÍCIOS */
-    .beneficios {
-      padding: 40px 22px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .beneficios h2 { 
-      font-size: 26px;
-      background: linear-gradient(90deg, #c9a142, #f8e7a0, #fff8d9); /* Gradiente nos títulos da seção */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .beneficios-list {
-      margin-top: 22px;
-      display: grid;
-      gap: 18px;
-    }
-    .beneficio {
-      background: #111;
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 18px;
-      border-radius: 10px;
-      text-align:left;
-    }
+    /* value grid */
+    .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+    .value-card{background:linear-gradient(180deg,#140000,#070000);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .value-card h3{color:var(--gold);margin-bottom:8px}
+    .value-card p{color:var(--muted)}
 
-    /* SEÇÃO BÔNUS */
-    .bonus-wrapper {
-      text-align: center;
-      margin-top: 40px;
-    }
+    /* bonus */
+    .bonus-grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    .bonus-card{width:220px;background:linear-gradient(180deg,#2b0000,#100);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);box-shadow:0 18px 60px rgba(0,0,0,0.6);text-align:center}
+    .bonus-card img{width:56px;margin-bottom:8px}
 
-    .bonus-wrapper h2 {
-      font-size: 30px;
-      background: linear-gradient(45deg, #f7c140, #ff6d00); /* Gradiente no título */
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 20px;
-    }
+    /* mockup */
+    .mockup-wrap{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:20px}
+    .mockup{width:420px;height:300px;border-radius:16px;background:linear-gradient(180deg,#0b0b0b,#030302);overflow:hidden;box-shadow:0 60px 160px rgba(0,0,0,0.6);transform-style:preserve-3d;transition:transform .5s var(--ease)}
+    .mockup img{width:100%;height:100%;object-fit:cover}
 
-    .bonus-card {
-      display: inline-block;
-      background: #111;
-      padding: 10px;
-      border-radius: 10px;
-      margin: 10px;
-      width: 150px; /* Tamanho reduzido */
-      text-align: center;
-    }
+    /* timeline */
+    .timeline{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+    .node{min-width:200px;background:linear-gradient(180deg,#1a0000,#070000);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
 
-    .bonus-card img {
-      width: 20px; /* Tamanho das imagens dos bônus reduzido */
-      height: auto;
-    }
+    /* vsl */
+    .vsl-box{max-width:980px;margin:20px auto;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);box-shadow:0 60px 160px rgba(0,0,0,0.7)}
+    .vsl-box iframe{width:100%;height:520px;border:0}
 
-    .bonus-card h4 {
-      font-size: 16px;
-      margin-top: 10px;
-      color: #fff;
-    }
+    /* faq */
+    details{background:linear-gradient(180deg,#120000,#080000);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);color:var(--muted);margin-bottom:10px}
+    summary{cursor:pointer;font-weight:800;color:var(--gold);font-size:1.05rem}
 
-    .bonus-card p {
-      font-size: 12px;
-      color: #ccc;
-    }
+    .closing{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#000,#0b0000)}
+    .closing img{width:320px;border-radius:12px;box-shadow:0 40px 120px rgba(0,0,0,0.6);margin-bottom:18px}
 
-    /* OFERTA */
-    .oferta {
-      padding: 50px 22px;
-      text-align:center;
-      max-width: 900px;
-      margin: 0 auto;
-      background: #1e1e1e;
-      border-radius: 12px;
-      color: var(--light);
-    }
-    .oferta-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .oferta-wrap img {
-      width: 80%; /* Ajuste o valor para controlar o tamanho da imagem */
-      height: auto;
-      max-width: 500px; /* Limita o tamanho máximo da imagem */
-      margin-bottom: 20px; /* Dá um pequeno espaçamento abaixo da imagem */
-    }
-    .preco {
-      font-size: 38px;
-      font-weight: 800;
-      margin: 16px 0;
-      color: var(--accent);
-    }
-    .preco-antigo {
-      text-decoration: line-through;
-      font-size: 20px;
-      color: var(--muted);
-      margin-right: 10px;
-    }
+    footer{padding:36px 20px;text-align:center;color:var(--muted);font-size:14px;background:#000}
 
-    /* GARANTIA */
-    .garantia {
-      padding: 50px 22px;
-      text-align:center;
-      max-width: 900px;
-      margin: 0 auto;
-      color: var(--light);
-      margin-top: 30px;
-    }
+    /* floating actions */
+    .actions{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:12px;z-index:9998}
+    .fab{width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,#25d366,#16a34a);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 30px 80px rgba(37,211,102,0.18)}
+    .concierge{position:fixed;left:18px;bottom:18px;width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,#3a0b0b,#7a0f0f);display:flex;align-items:center;justify-content:center;font-size:20px;z-index:9998;box-shadow:0 30px 90px rgba(0,0,0,0.6)}
+    .concierge-panel{position:fixed;left:18px;bottom:92px;width:340px;background:linear-gradient(180deg,#0b0b0b,#060606);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 60px 160px rgba(0,0,0,0.7);display:none;z-index:9999}
 
-    .selo-group img {
-      width: 50px; /* Ajuste o tamanho conforme o desejado */
-      height: auto;
-      margin: 0 10px; /* Espaçamento entre os selos */
-    }
+    /* responsive */
+    @media(max-width:980px){.hero h1{font-size:2.2rem}.vsl-box iframe{height:320px}.mockup{width:320px;height:220px}}
+    @media(max-width:520px){header{height:60px;font-size:.98rem}.btn-primary{padding:12px 20px}.mosaic{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:1fr}.mockup{width:280px;height:200px}}
 
-    /* FOOTER */
-    footer {
-      text-align:center;
-      padding: 30px;
-      color: var(--muted);
-      font-size: 14px;
-      margin-top:40px;
-    }
+    /* reveal */
+    .reveal{opacity:0;transform:translateY(14px);transition:all .7s var(--ease)}
+    .reveal.visible{opacity:1;transform:none}
+  </style>
 
-    /* ANIMAÇÃO DE NEVE */
-    .snowflake {
-      position: absolute;
-      background-color: white;
-      border-radius: 50%;
-      width: 15px;
-      height: 15px;
-      opacity: 0.8;
-      animation: snow 12s linear infinite;
-      transform: rotate(45deg); /* Para dar um formato mais "realista" aos flocos */
-    }
+  <!-- Defer heavy libraries (GSAP, Lenis) but include placeholders -->
+  <script defer src="https://unpkg.com/gsap@3.12.0/dist/gsap.min.js"></script>
+  <script defer src="https://unpkg.com/gsap@3.12.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.24/dist/lenis.min.js"></script>
 
-    .snowflake:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      background-color: white;
-      border-radius: 50%;
-      transform: translateX(-50%);
-    }
+  <!-- Meta Pixel -->
+  <script>
+    /* Meta Pixel - Insert your Pixel ID here */
+    window.fbq = window.fbq || function(){(window.fbq.q=window.fbq.q||[]).push(arguments)};
+    fbq('init', 'PIXEL_ID'); // Replace PIXEL_ID with your Meta Pixel ID
+    fbq('track', 'PageView');
+  </script>
 
-    .snow-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1; /* Garante que a neve fique atrás do conteúdo */
-    }
-
-    @keyframes snow {
-      0% {
-        transform: translateY(-100px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
-    }
-</style>
 </head>
 <body>
+<header aria-hidden="false">🎄 Oferta Especial de Natal — Últimas Vagas com Desconto 🎁</header>
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="lights" aria-hidden="true"></div>
+    <div class="snow-layer" id="snowLayer" aria-hidden="true"></div>
 
-<header>🔥 Oferta limitada — Black Friday estendida 🔥</header>
+    <div class="hero-inner container">
+      <h1 class="reveal">Transforme sua cozinha em uma máquina de lucro neste Natal</h1>
+      <p class="lead lead-muted reveal">50 receitas testadas, rápidas e baratas — com markup sugerido e roteiro de vendas para você vender ainda em dezembro.</p>
 
-<section class="hero">
-  <div class="hero-right">
-    <img src="assets/images/imagemdahero.webp" alt="50 receitas natalinas" />
-  </div>
-  <h1>Aprenda 50 Receitas Rápidas e Lucrativas Para o Natal</h1>
-  <p class="lead">Receitas testadas, práticas, baratas e prontas para vender e lucrar ainda em dezembro — mesmo começando do zero.</p>
-  <a href="https://pay.kiwify.com.br/XYXtV6d" class="btn">Transforme seu Natal em lucro agora!</a>
+      <a class="btn-primary reveal" id="ctaHero" href="https://pay.kiwify.com.br/XYXtV6d" target="_blank" rel="noopener">Quero lucrar neste Natal 🎄</a>
 
-  <!-- Bandeiras de Cartões -->
-  <div class="card-flags">
-    <img src="assets/images/bandeirascartoes.webp" alt="Bandeiras">  
-  </div>
-</section>
-
-<section class="provas" id="provas">
-  <h2>Mais de 1.200 alunos já lucraram com estas receitas</h2>
-  <div class="provas-grid">
-    <div class="dep-item"><img src="assets/images/depo1.webp" alt="Depoimento 1" /></div>
-    <div class="dep-item"><img src="assets/images/depo2.webp" alt="Depoimento 2" /></div>
-    <div class="dep-item"><img src="assets/images/depo3.webp" alt="Depoimento 3" /></div>
-  </div>
-</section>
-
-<section class="beneficios">
-  <h2>O que você vai receber</h2>
-  <div class="beneficios-list">
-    <div class="beneficio"> ✔ Comece do zero e venda ainda neste Natal</div>
-    <div class="beneficio"> ✔ Receitas básicas e baratas para lucro alto</div>
-    <div class="beneficio"> ✔ 50 receitas lucrativas testadas e aprovadas</div>
-    <div class="beneficio"> ✔ Divulgação inteligente para vender mesmo com poucos seguidores</div>
-    <div class="beneficio"> ✔ Scripts de conversa prontos para fechar venda</div>
-    <div class="beneficio"> ✔ Estratégias de pós-venda para multiplicar o lucro</div>
-  </div>
-</section>
-
-<!-- SEÇÃO BÔNUS -->
-<section class="bonus-wrapper">
-  <h2>🎁 Bônus Exclusivos</h2>
-  <div class="bonus-card">
-    <img src="assets/images/presentes1.webp" class="present-icon" />
-    <div>
-      <h4>Biscoitos Natalinos</h4>
-      <p>Receitas profissionais para vender muito.</p>
-    </div>
-  </div>
-  <div class="bonus-card">
-    <img src="assets/images/presentes1.webp" class="present-icon" />
-    <div>
-      <h4>Panetones e Chocotones Gourmet</h4>
-      <p>Receitas premium para atrair mais compradores.</p>
-    </div>
-  </div>
-  <div class="bonus-card">
-    <img src="assets/images/presentes1.webp" class="present-icon" />
-    <div>
-      <h4>Ganaches e Cremes Profissionais</h4>
-      <p>Versões especiais para encantar seus clientes.</p>
-    </div>
-  </div>
-  <div class="bonus-card">
-    <img src="assets/images/presentes1.webp" class="present-icon" />
-    <div>
-      <h4>Trufas Lucrativas</h4>
-      <p>Baixo custo e alta margem de lucro.</p>
-    </div>
-  </div>
-  <div class="bonus-card">
-    <img src="assets/images/presentes1.webp" class="present-icon" />
-    <div>
-      <h4>Ceia Natalina Completa</h4>
-      <p>O guia completo para um Natal lucrativo.</p>
-    </div>
-  </div>
-</section>
-
-<!-- OFERTA -->
-<section class="oferta" id="checkout">
-  <div class="oferta-wrap">
-    <div class="oferta-img">
-      <img src="assets/images/ebook.webp" alt="Mockup do e-book 50 Receitas de Ouro">
-    </div>
-    <div class="oferta-info">
-      <h2>Acesso imediato — Black Friday especial</h2>
-      <div class="preco">
-        <span class="preco-antigo">R$ 47,00</span> R$ 16,90
+      <div class="flags reveal" style="margin-top:18px">
+        <picture>
+          <source srcset="assets/images/bandeirascartoes.webp" type="image/webp">
+          <img src="assets/images/bandeirascartoes.png" alt="Bandeiras de cartão" loading="lazy">
+        </picture>
       </div>
-      <a href="https://pay.kiwify.com.br/XYXtV6d" class="btn">Garanta seu e-book e comece a vender no Natal!</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MOVI OS SELOS PARA AQUI (GARANTIA) -->
-<section class="garantia">
-  <div>
-    <h2>Garantia de 30 Dias — Sem Risco! (Oferta válida até o fim do mês!)</h2>
-    <p>Se não ficar satisfeito, garantimos seu dinheiro de volta. Sem complicação.</p>
-  </div>
-  <div class="selo-group">
-    <img src="assets/images/selo-1.png" alt="Pagamento seguro">
-    <img src="assets/images/selo-2.webp" alt="Acesso imediato">
-    <img src="assets/images/selogarantia30dias.webp" alt="Garantia">
-  </div>
-</section>
+ <!-- PROVAS -->
+  <section class="provas" id="provas">
+    <div class="container">
+      <h2 class="section-title reveal">Mural de Provas — Resultados Reais</h2>
+      <p class="lead-muted reveal">Alunos que aplicaram o método venderam no primeiro fim de semana — prints reais.</p>
+      <div class="mosaic reveal" id="mosaic">
+        <div class="pw"><img src="assets/images/depo1.webp" alt="Depoimento 1" loading="lazy"></div>
+        <div class="pw"><img src="assets/images/depo2.webp" alt="Depoimento 2" loading="lazy"></div>
+        <div class="pw"><img src="assets/images/depo3.webp" alt="Depoimento 3" loading="lazy"></div>
+        <div class="pw"><img src="assets/images/print-faturamento1.png" alt="Faturamento" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2025 Receitas de Ouro. Todos os direitos reservados.
-</footer>
+  <!-- BENEFICIOS -->
+  <section class="beneficios">
+    <div class="container">
+      <h2 class="section-title reveal">O que você vai receber — Value Stack</h2>
+      <p class="lead-muted reveal">Tudo pronto para entregar: receitas, scripts, embalagens e suporte simples para começar já.</p>
+      <div class="value-grid reveal">
+        <div class="value-card">
+          <h3>E-book 50 Receitas</h3>
+          <p>Receitas com custo, passo-a-passo e preço sugerido para alta margem.</p>
+        </div>
+        <div class="value-card">
+          <h3>Scripts de Venda</h3>
+          <p>Mensagens para WhatsApp e páginas de anúncio que convertem.</p>
+        </div>
+        <div class="value-card">
+          <h3>Bônus Práticos</h3>
+          <p>Checklist de produção, embalagens e rotas de entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="snow-container" id="snow-container"></div>
+  <!-- BONUS -->
+  <section class="bonus">
+    <div class="container">
+      <h2 class="section-title reveal">Bônus Premium</h2>
+      <p class="lead-muted reveal">Aumente seu ticket médio com itens complementares fáceis de produzir.</p>
+      <div class="bonus-grid reveal">
+        <div class="bonus-card"><img src="assets/images/presentes1.webp" alt="Bônus"><h4>Biscoitos Natalinos</h4><p>Receitas rápidas para venda em atacado.</p></div>
+        <div class="bonus-card"><img src="assets/images/presentes2.webp" alt="Bônus"><h4>Panetones Gourmet</h4><p>Versões premium para aumentar o ticket médio.</p></div>
+        <div class="bonus-card"><img src="assets/images/presentes3.webp" alt="Bônus"><h4>Ceia Completa</h4><p>Cardápio especial para encomendas.</p></div>
+      </div>
+    </div>
+  </section>
 
+ <!-- MOCKUP + CTA -->
+  <section class="mockup-section">
+    <div class="container">
+      <h2 class="section-title reveal">Visualize o E-book</h2>
+      <p class="lead-muted reveal">Entrega digital imediata com arquivos prontos para impressão e venda.</p>
+      <div class="mockup-wrap reveal">
+        <div class="mockup" id="mockup" tabindex="0"><img src="assets/images/ebook.webp" alt="E-book 50 Receitas" loading="lazy"></div>
+        <div style="max-width:480px;text-align:left;color:var(--muted)">
+          <h3 style="color:var(--gold)">Tudo pronto para vender</h3>
+          <p>Templates, scripts e design prontos — envie o link e comece a vender hoje.</p>
+                  <a class="btn-primary" id="ctaMockup" href="https://pay.kiwify.com.br/XYXtV6d" target="_blank" rel="noopener">Comprar agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-title reveal">Linha do Tempo — 0 a Vendas em 30 dias</h2>
+      <div class="timeline reveal" role="list">
+        <div class="node"><strong>Semana 1</strong><p style="color:var(--muted)">Preparação do menu e oferta</p></div>
+        <div class="node"><strong>Semana 2</strong><p style="color:var(--muted)">Criação de criativos e scripts</p></div>
+        <div class="node"><strong>Semana 3</strong><p style="color:var(--muted)">Lançamento e primeiras vendas</p></div>
+        <div class="node"><strong>Semana 4</strong><p style="color:var(--muted)">Escala e repeat</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VSL -->
+  <section class="vsl-section">
+    <div class="container">
+      <h2 class="section-title reveal">Assista à VSL Especial de Natal</h2>
+      <p class="lead-muted reveal">Apresentação curta que mostra passo a passo como lucrar este mês.</p>
+      <div class="vsl-box reveal">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" title="VSL" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="garantia">
+    <div class="container">
+      <h2 class="section-title reveal">Garantia Incondicional de 30 Dias</h2>
+      <p class="lead-muted reveal">Teste tudo por 30 dias — se não ficar satisfeito, devolvemos 100%.</p>
+      <div style="display:flex;gap:18px;justify-content:center;align-items:center;margin-top:18px" class="reveal">
+        <img src="assets/images/selo-1.png" alt="Selo" style="width:88px" loading="lazy">
+        <img src="assets/images/selo-2.webp" alt="Selo" style="width:88px" loading="lazy">
+        <img src="assets/images/selogarantia30dias.webp" alt="Selo" style="width:88px" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Perguntas Frequentes</h2>
+      <div class="faq-list reveal">
+        <details><summary>Preciso ter experiência para começar?</summary><p>Não — o passo a passo é pensado para iniciantes e para quem quer lucro rápido.</p></details>
+        <details><summary>As receitas realmente dão lucro?</summary><p>Sim — todas foram testadas com cálculos de custo e preço sugerido para margem real.</p></details>
+        <details><summary>Quando eu recebo o material?</summary><p>O acesso é imediato após confirmação do pagamento.</p></details>
+        <details><summary>Posso parcelar?</summary><p>Sim — opções de parcelamento disponíveis no checkout.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="container">
+      <h2 class="section-title reveal">Última Chance de Garantir o Desconto</h2>
+      <p class="lead-muted reveal">Preço promocional disponível por tempo limitado. Não perca.</p>
+      <img class="reveal" src="assets/images/ebook.webp" alt="Capa do ebook" loading="lazy">
+      <div style="margin-top:18px"><a class="btn-primary reveal" id="ctaClosing" href="https://pay.kiwify.com.br/XYXtV6d" target="_blank" rel="noopener">Quero meu acesso agora 🎄</a></div>
+      <p style="color:var(--muted);margin-top:10px" class="reveal">Compra segura · Acesso imediato · Garantia total de 30 dias</p>
+    </div>
+  </section>
+</main>
+
+<!-- Actions & Concierge -->
+<div class="actions">
+  <a class="fab" id="waFab" href="https://wa.me/5551999190482?text=Ol%C3%A1%2C%20quero%20saber%20mais" target="_blank" rel="noopener">📲</a>
+</div>
+<div class="concierge" id="concierge">🤵</div>
+<div class="concierge-panel" id="conciergePanel" role="dialog" aria-hidden="true">
+  <div style="display:flex;gap:12px;align-items:center;margin-bottom:8px"><div style="width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#fff)"></div><div><strong>Concierge VIP</strong><div style="color:var(--muted);font-size:13px">Atendimento personalizado</div></div></div>
+  <p style="color:var(--muted);font-size:14px">Quer condição especial? Posso verificar disponibilidade e enviar link com bônus.</p>
+  <div style="display:flex;gap:8px;margin-top:12px"><a class="btn-primary" id="conciergeWa" href="https://wa.me/5511999999999?text=Quero%20concierge" target="_blank" rel="noopener">Falar no WhatsApp</a><button id="closeConcierge" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 12px;border-radius:8px;cursor:pointer">Fechar</button></div>
+</div>
+
+<footer>© 2025 Receitas de Ouro — Todos os direitos reservados.</footer>
+
+<!-- SCRIPTS: performance, tracking events, GSAP + Lenis enhancements, CRO -->
 <script>
-  function createSnowflakes() {
-    const container = document.getElementById('snow-container');
-    for (let i = 0; i < 100; i++) {
-      let snowflake = document.createElement('div');
-      snowflake.classList.add('snowflake');
-      snowflake.style.left = Math.random() * 100 + 'vw';
-      snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
-      snowflake.style.animationDelay = Math.random() * 5 + 's';
-      container.appendChild(snowflake);
-    }
-  }
+// ========== Utilities ==========
+const now = () => new Date().toISOString();
+function sendEvent(name, data={}){
+  // DataLayer for GA4
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event: name, ...data});
+  // FB Pixel
+  if(window.fbq) try{ fbq('trackCustom', name, data); }catch(e){}
+  // console log for debug
+  console.log('Event', name, data, now());
+}
 
-  createSnowflakes();
+// ========== Reveal on scroll ==========
+(function(){
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.12});
+  items.forEach(i=>io.observe(i));
+})();
+
+// ========== Snow layer (optimized) ==========
+(function(){
+  const layer = document.getElementById('snowLayer'); if(!layer) return;
+  const count = Math.min(100, Math.round(window.innerWidth/12));
+  for(let i=0;i<count;i++){const s=document.createElement('div');s.className='snowflake';const left=Math.random()*100;const size=4+Math.random()*10;s.style.left=left+'vw';s.style.width=size+'px';s.style.height=size+'px';s.style.opacity=(0.25+Math.random()*0.9);s.style.top=(-5-Math.random()*20)+'vh';s.style.animationDuration=(6+Math.random()*10)+'s';layer.appendChild(s);} 
+})();
+
+// ========== Particles gold (desktop only) ==========
+(function(){
+  if(window.matchMedia && window.matchMedia('(max-width:740px)').matches) return; // save cpu on mobile
+  const c = document.createElement('canvas'); c.style.position='absolute'; c.style.inset='0'; c.style.zIndex='5'; c.style.pointerEvents='none'; document.querySelector('.hero').appendChild(c);
+  const ctx = c.getContext('2d'); function resize(){c.width=innerWidth;c.height=innerHeight;} resize(); window.addEventListener('resize', resize);
+  const P=[]; for(let i=0;i<90;i++){P.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.6+0.4,vx:(Math.random()-.5)/6,vy:(Math.random()-.5)/6,a:Math.random()*Math.PI*2});}
+  (function frame(){ctx.clearRect(0,0,c.width,c.height); for(const p of P){p.x+=p.vx; p.y+=p.vy; p.a+=.02; if(p.x<0)p.x=c.width; if(p.x>c.width)p.x=0; if(p.y<0)p.y=c.height; if(p.y>c.height)p.y=0; ctx.beginPath(); ctx.fillStyle='rgba(247,193,64,'+(0.06+Math.sin(p.a)*0.04)+')'; ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); } requestAnimationFrame(frame); })();
+})();
+
+// ========== Mockup tilt ==========
+(function(){ const mockup=document.getElementById('mockup'); if(!mockup) return; mockup.addEventListener('mousemove', e=>{const r=mockup.getBoundingClientRect();const cx=r.left+r.width/2;const cy=r.top+r.height/2;const dx=(e.clientX-cx)/r.width;const dy=(e.clientY-cy)/r.height;const rx=(-dy*10).toFixed(2);const ry=(dx*10).toFixed(2);mockup.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg) translateZ(6px)`}); mockup.addEventListener('mouseleave',()=>mockup.style.transform='rotateX(0) rotateY(0) translateZ(0)'); })();
+
+// ========== Mosaic modal ==========
+(function(){ const mosaic=document.getElementById('mosaic'); if(!mosaic) return; mosaic.addEventListener('click', e=>{const img=e.target.closest('img'); if(!img) return; const src=img.src; const modal=document.createElement('div'); modal.style.position='fixed'; modal.style.inset=0; modal.style.background='rgba(0,0,0,0.92)'; modal.style.display='flex'; modal.style.alignItems='center'; modal.style.justifyContent='center'; modal.style.zIndex=99999; modal.innerHTML=`<div style="max-width:92vw;max-height:92vh"><img src="${src}" style="max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 90px rgba(0,0,0,0.8)"></div>`; document.body.appendChild(modal); modal.addEventListener('click', ()=> modal.remove()); }); })();
+
+// ========== Concierge open/close ==========
+(function(){ const ic=document.getElementById('concierge'), panel=document.getElementById('conciergePanel'), close=document.getElementById('closeConcierge'); if(ic && panel){ic.addEventListener('click', ()=>{const open = panel.style.display === 'block'; panel.style.display = open ? 'none' : 'block'; panel.setAttribute('aria-hidden', open ? 'true' : 'false');}); if(close) close.addEventListener('click', ()=>{panel.style.display='none';panel.setAttribute('aria-hidden','true')}); } })();
+
+// ========== CTA events (tracking) ==========
+(function(){
+  document.getElementById('ctaHero')?.addEventListener('click', ()=>{ sendEvent('CTA_Hero', {label:'Hero CTA'}); });
+  document.getElementById('ctaMockup')?.addEventListener('click', ()=>{ sendEvent('CTA_Mockup',{label:'Mockup CTA'}); });
+  document.getElementById('ctaClosing')?.addEventListener('click', ()=>{ sendEvent('CTA_Closing',{label:'Closing CTA'}); });
+  document.getElementById('waFab')?.addEventListener('click', ()=>{ sendEvent('WhatsApp_Click',{label:'Floating WA'}); });
+  document.getElementById('conciergeWa')?.addEventListener('click', ()=>{ sendEvent('WhatsApp_Click',{label:'Concierge WA'}); });
+})();
+
+// ========== Exit intent popup ==========
+(function(){ let shown=false; function show(){ if(shown) return; shown=true; const d=document.createElement('div'); d.style.position='fixed'; d.style.inset=0; d.style.zIndex=9999999; d.style.background='rgba(0,0,0,0.78)'; d.style.display='flex'; d.style.alignItems='center'; d.style.justifyContent='center'; d.innerHTML=`<div style="background:#0b0b0b;padding:26px;border-radius:12px;max-width:420px;text-align:center;border:1px solid rgba(255,255,255,0.04)"><h3 style="color:var(--gold);margin-bottom:8px">Antes de sair…</h3><p style="color:var(--muted);margin-bottom:14px">Quer um cupom exclusivo para garantir o desconto agora?</p><a href="https://wa.me/5511999999999?text=Quero%20o%20cupom%20exclusivo" style="display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,#fff7d1,#ffe6a5);color:#700000;font-weight:900;text-decoration:none">Quero o cupom</a></div>`; document.body.appendChild(d); d.addEventListener('click', ()=> d.remove()); sendEvent('Exit_Popup_Shown'); }
+  document.addEventListener('mouseleave', e=>{ if(e.clientY<0) show(); });
+})();
+
+// ========== Performance tweaks ==========
+(function(){ // lazy load images already set; defer heavy libraries included; remove particle on small devices
+  if(window.matchMedia && window.matchMedia('(max-width:740px)').matches){ document.querySelectorAll('canvas, .snow-layer, .lights').forEach(el=>el && (el.style.display='none')); }
+})();
+
+// ========== Smooth scroll + GSAP niceties (init after load) ==========
+window.addEventListener('load', ()=>{
+  // Lenis smooth scroll - optional
+  try{
+    const Lenis = window.Lenis?.default || window.Lenis;
+    if(Lenis){ const lenis = new Lenis({duration:1.2,easing:t=>Math.pow(t,0.7)}); function raf(time){ lenis.raf(time); requestAnimationFrame(raf);} requestAnimationFrame(raf); }
+  }catch(e){console.warn('Lenis init failed',e)}
+  // GSAP reveal stagger for hero
+  try{
+    if(window.gsap){ gsap.from('.hero-inner .reveal',{y:18,opacity:0,duration:0.9,stagger:0.08,ease:'power3.out'}); }
+  }catch(e){console.warn('GSAP init failed',e)}
+});
+
 </script>
-
 </body>
 </html>
